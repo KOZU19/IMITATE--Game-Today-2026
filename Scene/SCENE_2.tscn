@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://rses4826dp34"]
+
+[ext_resource type="Script" uid="uid://bjg7kl0h440p6" path="res://scripts/SCENE_2.gd" id="1_e2161"]
+
+[node name="Node2D" type="Node2D" unique_id=1603787788]
+script = ExtResource("1_e2161")
+
+[node name="Point 1" type="Marker2D" parent="." unique_id=807359253]
+position = Vector2(132, 114)
+
+[node name="Point 2" type="Marker2D" parent="." unique_id=128277343]
+position = Vector2(990, 523)
+
+[node name="Point 3" type="Marker2D" parent="." unique_id=1722211264]
+position = Vector2(155, 530)
+
+[node name="Point 4" type="Marker2D" parent="." unique_id=686970585]
+position = Vector2(986, 106)
+
+[node name="Point 5" type="Marker2D" parent="." unique_id=212749617]
+position = Vector2(543, 106)
+
+[node name="Point 6" type="Marker2D" parent="." unique_id=1027124821]
+position = Vector2(543, 531)
+
+[node name="Point 7" type="Marker2D" parent="." unique_id=1826575259]
+position = Vector2(543, 300)
+
+[node name="Diabox1" type="ColorRect" parent="." unique_id=1995085682]
+offset_left = 18.0
+offset_top = 65.0
+offset_right = 371.0
+offset_bottom = 189.0
+color = Color(0.4697649, 0.5834128, 0.7792898, 1)
+
+[node name="Dia1" type="Label" parent="Diabox1" unique_id=925292386]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 28.0
+offset_right = 351.0
+offset_bottom = 102.0
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Diabox2" type="ColorRect" parent="." unique_id=1716759205]
+offset_left = 835.0
+offset_top = 458.0
+offset_right = 1188.0
+offset_bottom = 582.0
+color = Color(0.4697649, 0.5834128, 0.7792898, 1)
+
+[node name="Dia2" type="Label" parent="Diabox2" unique_id=252952111]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 28.0
+offset_right = 351.0
+offset_bottom = 102.0
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"

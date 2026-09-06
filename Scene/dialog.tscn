@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://d3rs62vidreag"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dypv2"]
+font_size = 29
+font_color = Color(0.80463314, 0.82780874, 0.67273456, 1)
+outline_size = 7
+outline_color = Color(0.30781147, 0.46900696, 0.7095132, 1)
+
+[node name="Dialog" type="Control" unique_id=1033169853]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2086892393]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 411.0
+offset_right = 1145.0
+offset_bottom = 638.0
+color = Color(0.4741823, 0, 0.020413214, 1)
+
+[node name="Label" type="Label" parent="." unique_id=901512554]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 458.0
+offset_right = 1110.23
+offset_bottom = 609.0
+theme_override_font_sizes/font_size = 27
+text = "By the way Taheera, would you up for the"
+label_settings = SubResource("LabelSettings_dypv2")
+
+[node name="Button" type="Button" parent="." unique_id=285814061]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 186.0
+offset_right = 991.0
+offset_bottom = 227.0
+
+[node name="Button2" type="Button" parent="." unique_id=1992708054]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 254.0
+offset_right = 999.0
+offset_bottom = 295.0
+
+[node name="Button3" type="Button" parent="." unique_id=627427604]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 315.0
+offset_right = 999.0
+offset_bottom = 356.0
+
+[node name="NameLabel" type="Label" parent="." unique_id=461113687]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 356.0
+offset_right = 125.0
+offset_bottom = 420.0
+theme_override_font_sizes/font_size = 46
+text = "Pooja"

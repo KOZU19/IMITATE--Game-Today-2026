@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://bhipetr01jbt3"]
+
+[ext_resource type="Texture2D" uid="uid://ckclwwwy88fse" path="res://sprite/Chara/Untitled225_20260829102216.png" id="2_fbwur"]
+[ext_resource type="Texture2D" uid="uid://bl3nhjb0gx4uh" path="res://sprite/Chara/Untitled225_20260829125120.png" id="3_l3se0"]
+[ext_resource type="Texture2D" uid="uid://ew1lfwhyhi2y" path="res://sprite/Chara/Untitled225_20260829102233.png" id="4_ykdxi"]
+[ext_resource type="Texture2D" uid="uid://cxnlttxi6p4ib" path="res://sprite/Chara/Untitled225_20260829102328.png" id="5_n4650"]
+[ext_resource type="Texture2D" uid="uid://bfva2y2m8gaw6" path="res://sprite/Chara/Untitled225_20260829101943.png" id="6_km40j"]
+[ext_resource type="Texture2D" uid="uid://0xqioq8m261s" path="res://sprite/Chara/Untitled225_20260829102243.png" id="7_tqm8d"]
+[ext_resource type="Texture2D" uid="uid://csg6xs0llh1ft" path="res://sprite/Chara/Untitled225_20260829102249.png" id="8_4d3dc"]
+[ext_resource type="Texture2D" uid="uid://dshx3myexngb8" path="res://sprite/Chara/Untitled225_20260829102229.png" id="9_6qbq1"]
+[ext_resource type="Texture2D" uid="uid://bcnq3wbo36ww8" path="res://sprite/Chara/Untitled225_20260829101949.png" id="10_3337o"]
+[ext_resource type="Texture2D" uid="uid://cnthtjdig5vav" path="res://sprite/Chara/Untitled225_20260829102221.png" id="11_iuwll"]
+[ext_resource type="Texture2D" uid="uid://bu580i8rcygq7" path="res://sprite/Chara/Untitled225_20260829102238.png" id="12_8plyi"]
+[ext_resource type="Texture2D" uid="uid://dire7ek078vrc" path="res://sprite/Chara/Untitled225_20260829103644.png" id="13_hcyi2"]
+[ext_resource type="Texture2D" uid="uid://djanu2mr6t58e" path="res://sprite/Chara/Untitled225_20260829102313.png" id="14_w1j1a"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tjrms"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_efvya"]
+sky_material = SubResource("ProceduralSkyMaterial_tjrms")
+
+[sub_resource type="Environment" id="Environment_uomeb"]
+background_mode = 2
+sky = SubResource("Sky_efvya")
+glow_enabled = true
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v088x"]
+radius = 0.49023438
+height = 2.4909668
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iyjhp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fbwur")
+}],
+"loop": 1,
+"name": &"artbook_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_l3se0")
+}],
+"loop": 1,
+"name": &"hand_on_chin_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ykdxi")
+}],
+"loop": 1,
+"name": &"hand_on_chin_tra",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_n4650")
+}],
+"loop": 1,
+"name": &"hand_on_waist_exp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_km40j")
+}],
+"loop": 1,
+"name": &"idle_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_tqm8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4d3dc")
+}],
+"loop": 1,
+"name": &"idle_exp",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_6qbq1")
+}],
+"loop": 1,
+"name": &"idle_tra",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_3337o")
+}],
+"loop": 1,
+"name": &"look_phone_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_iuwll")
+}],
+"loop": 1,
+"name": &"look_phone_tra",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_8plyi")
+}],
+"loop": 1,
+"name": &"sleep_tra",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_hcyi2")
+}],
+"loop": 1,
+"name": &"squat_exp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_w1j1a")
+}],
+"loop": 1,
+"name": &"take_a_pic_exp",
+"speed": 5.0
+}]
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=254430871]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=222085193]
+environment = SubResource("Environment_uomeb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=794538841]
+transform = Transform3D(1.7012359, 0.05534533, 0, -0.090874, 1.0361099, 0, 0, 0, 1, -0.43842363, -0.035287432, 0)
+shape = SubResource("CapsuleShape3D_v088x")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=650893402]
+transform = Transform3D(0.24465121, 0.011130547, 0, -0.013068403, 0.20837298, 0, 0, 0, 1, 0, 0, 0)
+sprite_frames = SubResource("SpriteFrames_iyjhp")
+animation = &"hand_on_chin_eat"
+
+[node name="Camera Pivot" type="Node3D" parent="." unique_id=1523438206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5380752)
+
+[node name="Camera3D" type="Camera3D" parent="Camera Pivot" unique_id=520094797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5739622, 0, -0.36338925)
+fov = 74.29857

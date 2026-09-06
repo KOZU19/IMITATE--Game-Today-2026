@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://cxwxpa28s5fqv"]
+
+[ext_resource type="Texture2D" uid="uid://bra2chk3px2iw" path="res://sprite/Untitled1234_20260827232159.png" id="1_l0awi"]
+[ext_resource type="Texture2D" uid="uid://cr50ltuylv2qa" path="res://sprite/Untitled1234_20260827232311.png" id="2_vlnfx"]
+[ext_resource type="Texture2D" uid="uid://btxsb4d1q6omg" path="res://sprite/Untitled1234_20260828005953.png" id="3_hhuln"]
+[ext_resource type="Texture2D" uid="uid://bq4xoqvwckxan" path="res://sprite/Untitled1234_20260827231937.png" id="4_cqp4c"]
+[ext_resource type="Texture2D" uid="uid://b5vm50wtmnmgl" path="res://sprite/Untitled1234_20260827231932.png" id="5_vttlv"]
+[ext_resource type="Texture2D" uid="uid://pa23vbu5tahe" path="res://sprite/Untitled1234_20260827231929.png" id="6_iwe7o"]
+[ext_resource type="Texture2D" uid="uid://bx1juh6vcmgmq" path="res://sprite/Untitled1234_20260827231835.png" id="7_mc0e8"]
+
+[node name="Control" type="Control" unique_id=1039805887]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EAT" type="TextureRect" parent="." unique_id=1424853346]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -370.0
+offset_top = 48.0
+offset_right = 1166.0
+offset_bottom = 1448.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("1_l0awi")
+
+[node name="TRAVEL" type="TextureRect" parent="." unique_id=1750175320]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -370.0
+offset_top = 48.0
+offset_right = 1166.0
+offset_bottom = 1448.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("2_vlnfx")
+
+[node name="EXPLORE" type="TextureRect" parent="." unique_id=794831232]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -370.0
+offset_top = 48.0
+offset_right = 1166.0
+offset_bottom = 1448.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("3_hhuln")
+
+[node name="Guide1" type="TextureRect" parent="." unique_id=776893150]
+layout_mode = 0
+offset_left = 780.00006
+offset_top = 40.0
+offset_right = 2316.0
+offset_bottom = 2088.0
+scale = Vector2(0.185, 0.185)
+texture = ExtResource("4_cqp4c")
+
+[node name="Guide2" type="TextureRect" parent="." unique_id=1134933227]
+layout_mode = 0
+offset_left = 783.00006
+offset_top = 39.000008
+offset_right = 2319.0
+offset_bottom = 2087.0
+scale = Vector2(0.185, 0.185)
+texture = ExtResource("5_vttlv")
+
+[node name="Guide3" type="TextureRect" parent="." unique_id=184542047]
+layout_mode = 0
+offset_left = 785.0
+offset_top = 47.0
+offset_right = 2321.0
+offset_bottom = 2095.0
+scale = Vector2(0.185, 0.185)
+texture = ExtResource("6_iwe7o")
+
+[node name="Guide4" type="TextureRect" parent="." unique_id=232456865]
+layout_mode = 0
+offset_left = 789.0
+offset_top = 37.0
+offset_right = 2325.0
+offset_bottom = 2085.0
+scale = Vector2(0.185, 0.185)
+texture = ExtResource("7_mc0e8")

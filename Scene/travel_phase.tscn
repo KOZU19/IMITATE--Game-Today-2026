@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b2gmkeb1tuv2r"]
+
+[ext_resource type="Script" uid="uid://2u8hrr8wmva1" path="res://Scene/berangkat.gd" id="1_m4vnu"]
+[ext_resource type="PackedScene" uid="uid://cxwxpa28s5fqv" path="res://Scene/Pose_Guide.tscn" id="2_gou4u"]
+[ext_resource type="PackedScene" uid="uid://bhipetr01jbt3" path="res://Scene/MC.tscn" id="3_m4vnu"]
+[ext_resource type="Script" uid="uid://bm7lrdisup2tl" path="res://scripts/mc_travel.gd" id="4_gou4u"]
+[ext_resource type="PackedScene" uid="uid://cedw0jq2dnum5" path="res://Scene/in_the_car.tscn" id="4_m4vnu"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fvjdh"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_11yys"]
+sky_material = SubResource("ProceduralSkyMaterial_fvjdh")
+
+[sub_resource type="Environment" id="Environment_ag4vl"]
+background_mode = 2
+sky = SubResource("Sky_11yys")
+glow_enabled = true
+
+[node name="Berangkat" type="Node3D" unique_id=1507914211]
+script = ExtResource("1_m4vnu")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1733506845]
+environment = SubResource("Environment_ag4vl")
+
+[node name="Control" parent="." unique_id=1039805887 instance=ExtResource("2_gou4u")]
+
+[node name="EAT" parent="Control" index="0" unique_id=1424853346]
+visible = false
+
+[node name="EXPLORE" parent="Control" index="2" unique_id=794831232]
+visible = false
+
+[node name="CharacterBody3D" parent="." unique_id=254430871 instance=ExtResource("3_m4vnu")]
+transform = Transform3D(1, 0, 0, 0, 0.9313885, -0.36402667, 0, 0.36402667, 0.9313885, 0.06632519, 0, -0.28078222)
+script = ExtResource("4_gou4u")
+
+[node name="Camera Pivot" parent="CharacterBody3D" index="3" unique_id=1523438206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.9158719)
+
+[node name="Camera3D" parent="CharacterBody3D/Camera Pivot" index="0" unique_id=520094797]
+transform = Transform3D(-0.9983973, 0.046882838, 0.031701054, 0.05215842, 0.979634, 0.19389886, -0.0219649, 0.19524156, -0.9805093, -0.5739622, 0.556975, -0.8658664)
+
+[node name="in the car" parent="." unique_id=1507015197 instance=ExtResource("4_m4vnu")]
+transform = Transform3D(0.32, 0, 0, 0, 0.32, 0, 0, 0, 0.32, -0.7090305, -0.5129216, 0)
+
+[editable path="Control"]
+[editable path="CharacterBody3D"]

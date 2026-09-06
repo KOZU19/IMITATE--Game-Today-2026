@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://2qtycyjyyanb"]
+
+[ext_resource type="PackedScene" uid="uid://bquf08mf8otul" path="res://3d asset/umiam.glb" id="1_hvs2g"]
+
+[node name="Node3D" type="Node3D" unique_id=1189128816]
+
+[node name="umiam" parent="." unique_id=1185660743 instance=ExtResource("1_hvs2g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.162809, 0, -6.6307344)

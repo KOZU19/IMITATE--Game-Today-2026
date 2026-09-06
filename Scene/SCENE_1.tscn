@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bcpuc7bgq853i"]
+
+[ext_resource type="Script" uid="uid://cnfhdvhxm4ogn" path="res://SCENE_1.gd" id="1_bo1wc"]
+
+[node name="Node2D" type="Node2D" unique_id=1551523834]
+script = ExtResource("1_bo1wc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=360403706]
+offset_top = 529.0
+offset_right = 1150.0
+offset_bottom = 650.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=568088046]
+offset_left = 68.0
+offset_top = 553.0
+offset_right = 1049.0
+offset_bottom = 627.0
+theme_override_font_sizes/font_size = 23
+text = "i dont like u at all"

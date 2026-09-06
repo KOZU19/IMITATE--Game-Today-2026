@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cdfmh86h8oqiv"]
+
+[ext_resource type="PackedScene" uid="uid://cdjfym256uywm" path="res://3d asset/police bazaar.glb" id="1_blj84"]
+
+[node name="Node3D" type="Node3D" unique_id=1778455113]
+
+[node name="police bazaar" parent="." unique_id=2064545574 instance=ExtResource("1_blj84")]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, 0.15438592, 0, 0.15729547)

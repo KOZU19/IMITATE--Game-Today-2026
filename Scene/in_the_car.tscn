@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cedw0jq2dnum5"]
+
+[ext_resource type="PackedScene" uid="uid://bb46ea5n75qpq" path="res://3d asset/in the car.glb" id="1_yvjre"]
+
+[node name="in the car" unique_id=1507015197 instance=ExtResource("1_yvjre")]
+
+[node name="Cube_025" parent="." index="25" unique_id=319440197]
+visible = false

@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cpawyc7fttnfo"]
+
+[ext_resource type="Script" uid="uid://2u8hrr8wmva1" path="res://Scene/berangkat.gd" id="1_5eo70"]
+[ext_resource type="PackedScene" uid="uid://cxwxpa28s5fqv" path="res://Scene/Pose_Guide.tscn" id="2_80my2"]
+[ext_resource type="PackedScene" uid="uid://bfrqi45q4wwhk" path="res://Scene/stats.tscn" id="2_dypv2"]
+[ext_resource type="PackedScene" uid="uid://bhipetr01jbt3" path="res://Scene/MC.tscn" id="3_1f086"]
+[ext_resource type="Script" uid="uid://bm7lrdisup2tl" path="res://scripts/mc_travel.gd" id="4_do5d8"]
+[ext_resource type="PackedScene" uid="uid://cedw0jq2dnum5" path="res://Scene/in_the_car.tscn" id="5_dypv2"]
+[ext_resource type="Script" uid="uid://dvhsf37l3jdjv" path="res://Scene/dialog.gd" id="6_80my2"]
+[ext_resource type="PackedScene" uid="uid://d3rs62vidreag" path="res://Scene/dialog.tscn" id="6_do5d8"]
+[ext_resource type="PackedScene" uid="uid://bgjarkhb21v08" path="res://Scene/choices.tscn" id="8_dypv2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fvjdh"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_11yys"]
+sky_material = SubResource("ProceduralSkyMaterial_fvjdh")
+
+[sub_resource type="Environment" id="Environment_ag4vl"]
+background_mode = 2
+sky = SubResource("Sky_11yys")
+glow_enabled = true
+
+[node name="Berangkat" type="Node3D" unique_id=1507914211]
+script = ExtResource("1_5eo70")
+
+[node name="Control" parent="." unique_id=449163132 instance=ExtResource("2_dypv2")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1733506845]
+environment = SubResource("Environment_ag4vl")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1502546651]
+
+[node name="Control" parent="Node3D" unique_id=1039805887 instance=ExtResource("2_80my2")]
+visible = false
+
+[node name="EAT" parent="Node3D/Control" index="0" unique_id=1424853346]
+visible = false
+
+[node name="EXPLORE" parent="Node3D/Control" index="2" unique_id=794831232]
+visible = false
+
+[node name="CharacterBody3D" parent="Node3D" unique_id=254430871 instance=ExtResource("3_1f086")]
+transform = Transform3D(1, 0, 0, 0, 0.9313885, -0.36402667, 0, 0.36402667, 0.9313885, 0.06632519, 0, -0.28078222)
+script = ExtResource("4_do5d8")
+
+[node name="Camera Pivot" parent="Node3D/CharacterBody3D" index="3" unique_id=1523438206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.9158719)
+
+[node name="Camera3D" parent="Node3D/CharacterBody3D/Camera Pivot" index="0" unique_id=520094797]
+transform = Transform3D(-0.9983973, 0.046882857, 0.031701062, 0.052158445, 0.9796341, 0.19389907, -0.0219649, 0.19524178, -0.9805092, -0.48571444, 0.35729325, -0.5559306)
+
+[node name="in the car" parent="Node3D" unique_id=1507015197 instance=ExtResource("5_dypv2")]
+transform = Transform3D(0.32, 0, 0, 0, 0.32, 0, 0, 0, 0.32, -0.7090305, -0.5129216, 0)
+
+[node name="Dialog" parent="." unique_id=316338097 instance=ExtResource("6_do5d8")]
+script = ExtResource("6_80my2")
+
+[node name="Button" parent="Dialog" index="2" unique_id=285814061]
+visible = false
+
+[node name="Button2" parent="Dialog" index="3" unique_id=1992708054]
+visible = false
+
+[node name="Choices" parent="." unique_id=1289836488 instance=ExtResource("8_dypv2")]
+
+[connection signal="pressed" from="Dialog/Button" to="Dialog" method="_on_a_pressed"]
+[connection signal="pressed" from="Dialog/Button2" to="Dialog" method="_on_button_b_pressed"]
+
+[editable path="Control"]
+[editable path="Node3D/Control"]
+[editable path="Node3D/CharacterBody3D"]
+[editable path="Dialog"]

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://3r47x8p54dy3"]
+
+[ext_resource type="Script" uid="uid://ba6uakrgypjcs" path="res://text.gd" id="1_afvv0"]
+
+[node name="Node2D" type="Node2D" unique_id=1861687452]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1993293593]
+anchors_preset = -1
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = 37.0
+offset_right = 1168.0
+offset_bottom = 692.0
+grow_vertical = 2
+color = Color(0.518865, 0.18528011, 0.22027886, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=1049499400]
+offset_left = 219.0
+offset_top = 432.0
+offset_right = 1081.0
+offset_bottom = 586.0
+
+[node name="Panel2" type="Panel" parent="." unique_id=176380503]
+offset_left = 28.0
+offset_top = 474.0
+offset_right = 194.0
+offset_bottom = 628.0
+
+[node name="Label" type="Label" parent="." unique_id=1856200513]
+offset_left = 226.0
+offset_top = 459.0
+offset_right = 403.0
+offset_bottom = 482.0
+text = "aaaaaaaaaaaaaaaaaaa"
+script = ExtResource("1_afvv0")
+new_text = "aaaaaaa"

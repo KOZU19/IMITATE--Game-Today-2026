@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://0q0vinrluicg"]
+
+[ext_resource type="Script" uid="uid://bgrvcacwehq4s" path="res://scripts/observable.gd" id="1_gjof7"]
+[ext_resource type="Texture2D" uid="uid://b0ntqxsh3m5ip" path="res://sprite/2026_08_21_0x9_Kleki.png" id="2_evi7g"]
+[ext_resource type="Script" uid="uid://cw46sanxgjxdh" path="res://scripts/camera_3d.gd" id="3_4iytb"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x3hdu"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_jlm6r"]
+sky_material = SubResource("ProceduralSkyMaterial_x3hdu")
+
+[sub_resource type="Environment" id="Environment_wkrjc"]
+background_mode = 2
+sky = SubResource("Sky_jlm6r")
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_iyjhp"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_iyjhp"]
+radius = 1.3955013
+
+[node name="Node3D" type="Node3D" unique_id=1930360732]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1686633333]
+environment = SubResource("Environment_wkrjc")
+
+[node name="bg" type="CSGCombiner3D" parent="." unique_id=1590771415]
+transform = Transform3D(11.422039, 0, 0, 0, 0.25039637, 0, 0, 0, 4.737964, 0, 0, 0)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="bg" unique_id=1933629387]
+mesh = SubResource("BoxMesh_iyjhp")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="bg" unique_id=2119301466]
+transform = Transform3D(1, 0, 0, 0, 11.90733, 0, 0, 0, 0.05357105, 0, 5.6201415, -0.58200246)
+mesh = SubResource("BoxMesh_iyjhp")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="bg" unique_id=1435209117]
+transform = Transform3D(0.07298773, 0, 0, 0, 11.90733, 0, 0, 0, 1.0837607, 0.48279575, 5.6201415, -0.018623158)
+mesh = SubResource("BoxMesh_iyjhp")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="bg" unique_id=1426894457]
+transform = Transform3D(0.07298773, 0, 0, 0, 11.90733, 0, 0, 0, 1.0837607, -0.5108041, 5.6201415, -0.018623158)
+mesh = SubResource("BoxMesh_iyjhp")
+
+[node name="OBJ1" type="StaticBody3D" parent="." unique_id=1172286832]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7734137, 0.56928027, 0)
+script = ExtResource("1_gjof7")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="OBJ1" unique_id=2070081714]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24834704, 0.24351728, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OBJ1" unique_id=574315705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4376936, 0.56928027, 0)
+shape = SubResource("SphereShape3D_iyjhp")
+
+[node name="Marker3D" type="Marker3D" parent="OBJ1" unique_id=256791937]
+
+[node name="OBJ2" type="StaticBody3D" parent="." unique_id=1624871062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.66990757, 0.56928027, 0)
+script = ExtResource("1_gjof7")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="OBJ2" unique_id=1636395419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24834704, 0.24351728, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OBJ2" unique_id=1625583314]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4376936, 0.56928027, 0)
+shape = SubResource("SphereShape3D_iyjhp")
+
+[node name="Marker3D" type="Marker3D" parent="OBJ2" unique_id=1011545469]
+
+[node name="Node3D" type="Node3D" parent="." unique_id=210894460]
+transform = Transform3D(0.31361216, 0, 0, 0, 0.33334184, 0, 0, 0, 5.134817, -2.8550406, 1.0712266, 1.1314858)
+visible = false
+
+[node name="Sprite3D" type="Sprite3D" parent="Node3D" unique_id=1309944726]
+transform = Transform3D(0.31361216, 0, 0, 0, 0.33334184, 0, 0, 0, 5.134817, -2.8550406, 1.0712266, 1.1314858)
+texture = ExtResource("2_evi7g")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Node3D" unique_id=1295524259]
+transform = Transform3D(0.31361216, 0, 0, 0, 0.33334184, 0, 0, 0, 5.134817, 0.038048267, 1.0712266, 1.1314858)
+texture = ExtResource("2_evi7g")
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1341654756]
+transform = Transform3D(0.31361216, 0, 0, 0, 0.33334184, 0, 0, 0, 5.134817, -2.8550406, 1.0712266, 1.1314858)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=132800129]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4503428, 1.0712266, 3.897097)
+fov = 67.082504
+script = ExtResource("3_4iytb")
+observation_duration = null

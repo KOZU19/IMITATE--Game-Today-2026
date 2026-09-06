@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b4l84i3i5d6v0"]
+
+[ext_resource type="Script" uid="uid://c8u27beut5uoc" path="res://Scene/mc.gd" id="2_hariw"]
+[ext_resource type="PackedScene" uid="uid://cxwxpa28s5fqv" path="res://Scene/Pose_Guide.tscn" id="4_b3ulv"]
+[ext_resource type="PackedScene" uid="uid://bhipetr01jbt3" path="res://Scene/MC.tscn" id="4_hariw"]
+[ext_resource type="PackedScene" uid="uid://2qtycyjyyanb" path="res://Scene/envi.tscn" id="5_b3ulv"]
+
+[node name="Node2D" type="Node3D" unique_id=929486335]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1599448842]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Shreesta" parent="." unique_id=254430871 instance=ExtResource("4_hariw")]
+script = ExtResource("2_hariw")
+
+[node name="Camera3D" parent="Shreesta/Camera Pivot" parent_id_path=PackedInt32Array(254430871, 1523438206) index="0" unique_id=520094797]
+current = true
+
+[node name="Umiam" parent="." unique_id=1189128816 instance=ExtResource("5_b3ulv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 2)
+
+[node name="Control" parent="." unique_id=1039805887 instance=ExtResource("4_b3ulv")]
+
+[node name="EAT" parent="Control" index="0" unique_id=1424853346]
+visible = false
+
+[node name="TRAVEL" parent="Control" index="1" unique_id=1750175320]
+visible = false
+
+[editable path="Shreesta"]
+[editable path="Umiam"]
+[editable path="Control"]

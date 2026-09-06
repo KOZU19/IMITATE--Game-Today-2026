@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://d25squkohynyp"]
+
+[ext_resource type="VideoStream" uid="uid://bv6owiwypvx63" path="res://sprite/copy-d09cb6c5-782e-4d94-bc40-b1f9c663eb72-0j6gpu.ogv" id="1_s2ta7"]
+
+[node name="Control" type="Control" unique_id=1541118183]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1938717906]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1254775703]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 226.0
+offset_right = 595.0
+offset_bottom = 275.0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=669064966]
+
+[node name="Camera3D" type="Camera3D" parent="CSGBox3D" unique_id=1295209337]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1550265442]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.91, 0.91)
+audio_track = 1
+stream = ExtResource("1_s2ta7")
+autoplay = true

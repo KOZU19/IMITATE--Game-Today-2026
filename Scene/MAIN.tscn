@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://2hoqng3n8q7w"]
+
+[ext_resource type="Script" uid="uid://bt7lqayvkwrym" path="res://scripts/main.gd" id="1_ojrwd"]
+[ext_resource type="Texture2D" uid="uid://cl6u0l56bprgg" path="res://sprite/Untitled214_20260819154228.png" id="2_4c5ek"]
+[ext_resource type="AudioStream" uid="uid://diru6x7rb18rp" path="res://Music/Warmth.wav" id="3_8p385"]
+
+[sub_resource type="Animation" id="Animation_0llpg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_a1u8q"]
+resource_name = "menu"
+length = 2.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1.5, 2.5666666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_78rud"]
+_data = {
+&"RESET": SubResource("Animation_0llpg"),
+&"menu": SubResource("Animation_a1u8q")
+}
+
+[node name="Node2D" type="Node2D" unique_id=1947401183]
+script = ExtResource("1_ojrwd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1341181382]
+root_node = NodePath("../Label2")
+libraries/ = SubResource("AnimationLibrary_78rud")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1554172744]
+offset_right = 1151.0
+offset_bottom = 656.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect" unique_id=1879613618]
+position = Vector2(568.99994, 329.99997)
+scale = Vector2(0.6020833, 0.61296296)
+texture = ExtResource("2_4c5ek")
+
+[node name="Label" type="Label" parent="." unique_id=1410690782]
+offset_top = 269.0
+offset_right = 382.0
+offset_bottom = 395.0
+theme_override_font_sizes/font_size = 92
+text = "IMITATE!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=561587473]
+stream = ExtResource("3_8p385")
+autoplay = true
+
+[node name="Label2" type="Label" parent="." unique_id=737802007]
+offset_left = 388.0
+offset_top = 564.0
+offset_right = 856.0
+offset_bottom = 632.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.83137256)
+theme_override_font_sizes/font_size = 36
+text = "Press Space to Start"
