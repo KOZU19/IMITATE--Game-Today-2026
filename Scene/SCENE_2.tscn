@@ -2,29 +2,63 @@
 
 [ext_resource type="Script" uid="uid://bjg7kl0h440p6" path="res://scripts/SCENE_2.gd" id="1_e2161"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iyjhp"]
+size = Vector2(553.5, 636.5)
+
 [node name="Node2D" type="Node2D" unique_id=1603787788]
+position = Vector2(5, 0)
 script = ExtResource("1_e2161")
 
 [node name="Point 1" type="Marker2D" parent="." unique_id=807359253]
-position = Vector2(132, 114)
+position = Vector2(25, 41)
 
 [node name="Point 2" type="Marker2D" parent="." unique_id=128277343]
-position = Vector2(990, 523)
+position = Vector2(531, 612)
 
 [node name="Point 3" type="Marker2D" parent="." unique_id=1722211264]
-position = Vector2(155, 530)
+position = Vector2(1563, 83)
 
 [node name="Point 4" type="Marker2D" parent="." unique_id=686970585]
-position = Vector2(986, 106)
+position = Vector2(1950, 512)
 
 [node name="Point 5" type="Marker2D" parent="." unique_id=212749617]
-position = Vector2(543, 106)
+position = Vector2(2401, 70)
 
 [node name="Point 6" type="Marker2D" parent="." unique_id=1027124821]
-position = Vector2(543, 531)
+position = Vector2(2789, 545)
 
 [node name="Point 7" type="Marker2D" parent="." unique_id=1826575259]
-position = Vector2(543, 300)
+position = Vector2(3342, 67)
+
+[node name="Point 8" type="Marker2D" parent="." unique_id=846340496]
+position = Vector2(3659, 556)
+
+[node name="Point 9" type="Marker2D" parent="." unique_id=2044916711]
+position = Vector2(4056, 67)
+
+[node name="Point 10" type="Marker2D" parent="." unique_id=688639510]
+position = Vector2(4716, 571)
+
+[node name="Point 11" type="Marker2D" parent="." unique_id=1716226090]
+position = Vector2(5227, 53)
+
+[node name="Point 12" type="Marker2D" parent="." unique_id=329358714]
+position = Vector2(5647, 553)
+
+[node name="Point 13" type="Marker2D" parent="." unique_id=1347970806]
+position = Vector2(6117, 72)
+
+[node name="Point 14" type="Marker2D" parent="." unique_id=343411679]
+position = Vector2(6487, 541)
+
+[node name="Point 15" type="Marker2D" parent="." unique_id=1282349498]
+position = Vector2(7130, 49)
+
+[node name="Point 16" type="Marker2D" parent="." unique_id=797402303]
+position = Vector2(7549, 574)
+
+[node name="Point 17" type="Marker2D" parent="." unique_id=574571986]
+position = Vector2(6762, 62)
 
 [node name="Diabox1" type="ColorRect" parent="." unique_id=1995085682]
 offset_left = 18.0
@@ -35,11 +69,10 @@ color = Color(0.4697649, 0.5834128, 0.7792898, 1)
 
 [node name="Dia1" type="Label" parent="Diabox1" unique_id=925292386]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 28.0
-offset_right = 351.0
-offset_bottom = 102.0
-text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 341.0
+offset_bottom = 111.0
 
 [node name="Diabox2" type="ColorRect" parent="." unique_id=1716759205]
 offset_left = 835.0
@@ -55,3 +88,97 @@ offset_top = 28.0
 offset_right = 351.0
 offset_bottom = 102.0
 text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+
+[node name="Label" type="Label" parent="." unique_id=514394915]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Area1" type="Area2D" parent="." unique_id=13881500]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area1" unique_id=1580616052]
+position = Vector2(285, 324.75)
+shape = SubResource("RectangleShape2D_iyjhp")
+
+[node name="Area2" type="Area2D" parent="." unique_id=774024401]
+position = Vector2(635, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2" unique_id=1311776743]
+position = Vector2(285, 324.75)
+shape = SubResource("RectangleShape2D_iyjhp")
+
+[node name="Area3" type="Area2D" parent="." unique_id=1245299360]
+position = Vector2(1260, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area3" unique_id=1485711035]
+position = Vector2(285, 324.75)
+shape = SubResource("RectangleShape2D_iyjhp")
+
+[node name="Area4" type="Area2D" parent="." unique_id=1600952068]
+position = Vector2(1879, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area4" unique_id=1458978649]
+position = Vector2(285, 324.75)
+shape = SubResource("RectangleShape2D_iyjhp")
+
+[node name="Area5" type="Area2D" parent="." unique_id=468676234]
+position = Vector2(2495, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area5" unique_id=1956632143]
+position = Vector2(285, 324.75)
+shape = SubResource("RectangleShape2D_iyjhp")
+
+[node name="Area6" type="Area2D" parent="." unique_id=1702718593]
+position = Vector2(3123, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area6" unique_id=860422854]
+position = Vector2(285, 324.75)
+shape = SubResource("RectangleShape2D_iyjhp")
+
+[node name="Area7" type="Area2D" parent="." unique_id=1949424481]
+position = Vector2(3810, 30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area7" unique_id=606983534]
+position = Vector2(285, 324.75)
+shape = SubResource("RectangleShape2D_iyjhp")
+
+[node name="Area8" type="Area2D" parent="." unique_id=1045820834]
+position = Vector2(4507, 41)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area8" unique_id=1531687658]
+position = Vector2(285, 324.75)
+shape = SubResource("RectangleShape2D_iyjhp")
+
+[node name="Area9" type="Area2D" parent="." unique_id=1110862341]
+position = Vector2(5180, 55)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area9" unique_id=282371254]
+position = Vector2(285, 324.75)
+shape = SubResource("RectangleShape2D_iyjhp")
+
+[node name="Area10" type="Area2D" parent="." unique_id=175569268]
+position = Vector2(5799, 60)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area10" unique_id=1400435340]
+position = Vector2(285, 324.75)
+shape = SubResource("RectangleShape2D_iyjhp")
+
+[node name="Area11" type="Area2D" parent="." unique_id=182076578]
+position = Vector2(6450, 67)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area11" unique_id=1494284002]
+position = Vector2(285, 324.75)
+shape = SubResource("RectangleShape2D_iyjhp")
+
+[node name="Area12" type="Area2D" parent="." unique_id=682655219]
+position = Vector2(7080, 81)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area12" unique_id=621921123]
+position = Vector2(285, 324.75)
+shape = SubResource("RectangleShape2D_iyjhp")
+
+[node name="Area13" type="Area2D" parent="." unique_id=1340082892]
+position = Vector2(7705, 92)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area13" unique_id=339810226]
+position = Vector2(285, 324.75)
+shape = SubResource("RectangleShape2D_iyjhp")

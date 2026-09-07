@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cv7wa87xtupth"]
+
+[ext_resource type="Script" uid="uid://bkyfrhqan43rw" path="res://SCENE3.gd" id="1_2d0x6"]
+
+[node name="Node2D" type="Node2D" unique_id=1308131335]
+position = Vector2(0, 10)
+script = ExtResource("1_2d0x6")
+
+[node name="TEXT" type="Label" parent="." unique_id=1971985480]
+offset_right = 40.0
+offset_bottom = 23.0

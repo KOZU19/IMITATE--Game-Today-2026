@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://8xgccp4wwv8k"]
+
+[ext_resource type="PackedScene" uid="uid://dtf7n3apuxdf" path="res://Scene/observation_scene.tscn" id="1_peyqc"]
+
+[sub_resource type="GDScript" id="GDScript_iyjhp"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Node2D" type="Node2D" unique_id=1308131335]
+position = Vector2(0, 10)
+script = SubResource("GDScript_iyjhp")
+
+[node name="VN" type="Node2D" parent="." unique_id=921850418]
+
+[node name="ColorRect" type="ColorRect" parent="VN" unique_id=1565272775]
+offset_left = 3.0
+offset_top = 470.0
+offset_right = 1156.0
+offset_bottom = 625.0
+color = Color(0.22801965, 0.08041086, 0.03907938, 1)
+
+[node name="Label" type="Label" parent="VN" unique_id=290586572]
+offset_left = 35.0
+offset_top = 516.0
+offset_right = 275.0
+offset_bottom = 568.0
+text = "yjgkhkjlk"
+
+[node name="Button" type="Button" parent="VN/Label" unique_id=353250848]
+layout_mode = 0
+offset_left = 1004.0
+offset_top = -4.0
+offset_right = 1065.0
+offset_bottom = 53.0
+theme_override_font_sizes/font_size = 39
+text = ">"
+
+[node name="obs" parent="." unique_id=1186549978 instance=ExtResource("1_peyqc")]
+visible = false

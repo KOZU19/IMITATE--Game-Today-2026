@@ -11,11 +11,7 @@ func dialogue():
 	await get_tree().create_timer(2.0).timeout
 	await type_text("You could generate thousands unique ideas")
 	await get_tree().create_timer(2.0).timeout
-	await type_text("You have really advanced critical thinking ability")
-	await get_tree().create_timer(2.0).timeout
-	await type_text("And you are really good at analyzing and finding informations")
-	await get_tree().create_timer(2.0).timeout
-	await type_text("With all that qualities, you could be a very powerful individual, right?")
+	await type_text("With all that qualities, you could be a very powerful person, right?")
 	await get_tree().create_timer(2.0).timeout
 	await type_text("But  the thing is that...")
 	await get_tree().create_timer(2.0).timeout

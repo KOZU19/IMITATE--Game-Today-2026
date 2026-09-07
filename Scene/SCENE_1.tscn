@@ -5,13 +5,29 @@
 [node name="Node2D" type="Node2D" unique_id=1551523834]
 script = ExtResource("1_bo1wc")
 
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=639742689]
+offset_right = 1151.0
+offset_bottom = 307.0755
+scale = Vector2(1, 2.12)
+color = Color(0.3001937, 0, 0.07089075, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=795652141]
+offset_left = 187.0
+offset_top = 101.0
+offset_right = 912.0
+offset_bottom = 309.0189
+scale = Vector2(1, 2.12)
+color = Color(0.9999408, 0.2067016, 0.3608601, 1)
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=360403706]
+visible = false
 offset_top = 529.0
 offset_right = 1150.0
 offset_bottom = 650.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="." unique_id=568088046]
+visible = false
 offset_left = 68.0
 offset_top = 553.0
 offset_right = 1049.0
