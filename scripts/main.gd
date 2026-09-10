@@ -11,4 +11,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_accept"):
 		# wait bbrp sec n kasih tween fade out
-		get_tree().change_scene_to_file("res://backstory.tscn")
+		get_tree().change_scene_to_file("res://Scene/1B.tscn")
+		

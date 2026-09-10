@@ -1,6 +1,20 @@
 [gd_scene format=3 uid="uid://bfrqi45q4wwhk"]
 
 [ext_resource type="Script" uid="uid://kdsy4yl4inli" path="res://scripts/stats_ui.gd" id="1_qkx3n"]
+[ext_resource type="Texture2D" uid="uid://chptkcuo0cu5f" path="res://sprite/Chara/Rectangle 1 (2).png" id="2_ha636"]
+[ext_resource type="Texture2D" uid="uid://qoqy0jxa6df1" path="res://sprite/Chara/Rectangle 1 (1).png" id="3_04k6j"]
+[ext_resource type="Texture2D" uid="uid://ckclwwwy88fse" path="res://sprite/Chara/Untitled225_20260829102216.png" id="4_04k6j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iyjhp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_04k6j")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Control" type="Control" unique_id=2047607541]
 layout_mode = 3
@@ -22,9 +36,64 @@ offset_right = 40.0
 offset_bottom = 114.0
 text = "Friendship = "
 
+[node name="satisfaction" type="Label" parent="." unique_id=1039902299]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 134.0
+offset_right = 105.0
+offset_bottom = 157.0
+text = "Satisfaction"
+
 [node name="anxiety" type="Label" parent="." unique_id=1508155191]
 layout_mode = 0
-offset_top = 139.0
-offset_right = 100.0
-offset_bottom = 162.0
+offset_left = 6.0
+offset_top = 172.0
+offset_right = 106.0
+offset_bottom = 195.0
 text = "Anxiety = "
+
+[node name="SuspicionProgressBar" type="TextureProgressBar" parent="." unique_id=1795016312]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 49.0
+offset_right = 741.0
+offset_bottom = 119.0
+scale = Vector2(0.435, 0.435)
+texture_under = ExtResource("2_ha636")
+texture_progress = ExtResource("3_04k6j")
+
+[node name="FriendshipProgressBar" type="TextureProgressBar" parent="." unique_id=1742030440]
+layout_mode = 0
+offset_left = 114.99999
+offset_top = 92.0
+offset_right = 741.0
+offset_bottom = 162.0
+scale = Vector2(0.435, 0.435)
+texture_under = ExtResource("2_ha636")
+texture_progress = ExtResource("3_04k6j")
+
+[node name="SatisfactionProgressBar" type="TextureProgressBar" parent="." unique_id=1818789226]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 138.0
+offset_right = 747.0
+offset_bottom = 208.0
+scale = Vector2(0.435, 0.435)
+texture_under = ExtResource("2_ha636")
+texture_progress = ExtResource("3_04k6j")
+
+[node name="AnxietyProgressBar" type="TextureProgressBar" parent="." unique_id=127904709]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 175.0
+offset_right = 747.0
+offset_bottom = 245.0
+scale = Vector2(0.435, 0.435)
+texture_under = ExtResource("2_ha636")
+texture_progress = ExtResource("3_04k6j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=915639113]
+visible = false
+modulate = Color(0.5372549, 0.2627451, 0.32941177, 0.44313726)
+position = Vector2(617, 332)
+sprite_frames = SubResource("SpriteFrames_iyjhp")

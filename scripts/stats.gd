@@ -11,5 +11,5 @@ var satisfaction:int = 0:
 		satisfaction =min(value, limit)
 var Anxiety:int = 0:
 	set(value):
-		satisfaction =min(value, limit)
+		Anxiety =min(value, limit)
 		
