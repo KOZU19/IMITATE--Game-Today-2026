@@ -5,6 +5,7 @@ extends Control
 @onready var dialog_label_1: Label = $Control/DialogLabel1
 @onready var next_button: Button = $"Control/Next Button"
 
+
 @onready var choice_container: Control = $Choice_container
 
 
