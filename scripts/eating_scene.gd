@@ -9,18 +9,26 @@ var camera_yaw := 0.0
 func _physics_process(delta):
 	
 	if Input.is_action_pressed("pose1"):
+		if Stats.Anxiety >= 50:
+			return
 		if imitate_event.cooldown_time <= 0.0:
 			$AnimatedSprite3D.play("idle_exp")
 			imitate_event.try_pose(1)
 	elif Input.is_action_pressed("pose2"):
+		if Stats.Anxiety >= 50:
+			return
 		if imitate_event.cooldown_time <= 0.0:
 			$AnimatedSprite3D.play("squat_exp")
 			imitate_event.try_pose(2)
 	elif Input.is_action_pressed("pose3"):
+		if Stats.Anxiety >= 50:
+			return
 		if imitate_event.cooldown_time <= 0.0:
 			$AnimatedSprite3D.play("take_a_pic_exp")
 			imitate_event.try_pose(3)
 	elif Input.is_action_pressed("pose4"):
+		if Stats.Anxiety >= 50:
+			return
 		if imitate_event.cooldown_time <= 0.0:
 			$AnimatedSprite3D.play("hand_on_waist_exp")	
 			imitate_event.try_pose(4)

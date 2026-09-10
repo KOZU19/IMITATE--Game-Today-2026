@@ -9,6 +9,9 @@ extends Area3D
 @export var window_2_end := 30.0
 @export var window_3_start :=30.0
 @export var window_3_end := 45.0
+var idle_time := 0.0
+@export var idle_limit := 10.0
+
 @export var w1_pose1:={
 	"suspicion":5,
 	"friendship":5,
@@ -107,7 +110,7 @@ func end_imitate()->void:
 	is_active = false
 	print("imitate end")
 	ui.hide()
-	get_tree().change_scene_to_file("res://Scene/Experience/transition_pulang.tscn")
+	get_tree().change_scene_to_file("res://Scene/Experience/eating.tscn")
 
 func choose_pose(pose_name: String)->void:
 	if not is_active:

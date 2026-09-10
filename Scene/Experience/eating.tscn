@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bths6vx2xoxob"]
 
 [ext_resource type="Script" uid="uid://c4ukjo3hxt8cc" path="res://scripts/eating.gd" id="1_v063j"]
+[ext_resource type="PackedScene" uid="uid://brifwoi1i800q" path="res://Scene/Experience/anxiety_notice.tscn" id="2_a7cj0"]
+[ext_resource type="PackedScene" uid="uid://bfrqi45q4wwhk" path="res://Scene/stats.tscn" id="2_mxs8i"]
 
 [node name="VN" type="Control" unique_id=456281504]
 layout_mode = 3
@@ -61,6 +63,12 @@ offset_left = 1.0
 offset_top = -95.0
 offset_right = 1018.0
 offset_bottom = -33.0
+
+[node name="Anxiety_notice" parent="." unique_id=574936013 instance=ExtResource("2_a7cj0")]
+layout_mode = 0
+
+[node name="Control2" parent="." unique_id=2047607541 instance=ExtResource("2_mxs8i")]
+layout_mode = 0
 
 [connection signal="pressed" from="Control/Next Button" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="Choice_container/Choice1" to="." method="_on_choice_1_pressed"]

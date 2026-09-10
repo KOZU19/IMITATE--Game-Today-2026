@@ -2,10 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bhipetr01jbt3" path="res://Scene/MC.tscn" id="2_ivnpe"]
 [ext_resource type="Script" uid="uid://c8u27beut5uoc" path="res://scripts/mc.gd" id="3_6w3gi"]
-[ext_resource type="Script" uid="uid://ulax14an6al6" path="res://scripts/imitate_event.gd" id="4_bt1df"]
+[ext_resource type="Script" uid="uid://bcflfko6jd2dy" path="res://scripts/shop_imitatet.gd" id="3_ivnpe"]
 [ext_resource type="PackedScene" uid="uid://cxwxpa28s5fqv" path="res://UI/Pose_Guide.tscn" id="5_wqvxt"]
 [ext_resource type="PackedScene" uid="uid://cqilujjo4kcbw" path="res://3d asset/shopglb.glb" id="6_bt1df"]
 [ext_resource type="PackedScene" uid="uid://bfrqi45q4wwhk" path="res://Scene/stats.tscn" id="6_mb85d"]
+[ext_resource type="PackedScene" uid="uid://brifwoi1i800q" path="res://Scene/Experience/anxiety_notice.tscn" id="7_ivnpe"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iyjhp"]
 size = Vector3(1.3338623, 0.76807225, 3.2028503)
@@ -27,7 +28,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.526514)
 transform = Transform3D(2, 0, 0, 0, 2.3809524, 0, 0, 0, 1, -1.2147112, 0, -0.774021)
 
 [node name="ImitateEvent" type="Area3D" parent="." unique_id=2010294201]
-script = ExtResource("4_bt1df")
+script = ExtResource("3_ivnpe")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ImitateEvent" unique_id=84189769]
 transform = Transform3D(1.8, 0, 0, 0, 2.6, 0, 0, 0, 1, 0.30047607, 0.9717881, 0.5139618)
@@ -78,14 +79,21 @@ offset_right = 4.0
 offset_bottom = 452.0
 
 [node name="Label" type="Label" parent="." unique_id=1985121879]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 341.0
+offset_bottom = 168.0
+text = "You havent moved for a while..."
 
 [node name="shopglb" parent="." unique_id=1738931275 instance=ExtResource("6_bt1df")]
-transform = Transform3D(-0.010255761, 0, -0.15967095, 0, 0.16, 0, 0.15967095, 0, -0.010255761, -6.433001, 0, -2.5862274)
+transform = Transform3D(-0.005127883, 0, -0.07983548, 0, 0.08, 0, 0.07983548, 0, -0.005127883, -2.1441865, -0.13678741, -2.5174367)
+
+[node name="Anxiety_notice" parent="." unique_id=574936013 instance=ExtResource("7_ivnpe")]
+visible = true
+z_index = 2
+color = Color(0.12941177, 0.1882353, 0.46666667, 1)
 
 [connection signal="body_entered" from="ImitateEvent" to="ImitateEvent" method="_on_body_entered"]
 [connection signal="timeout" from="ImitateEvent/Timer" to="ImitateEvent" method="_on_timer_timeout"]
 
 [editable path="player"]
 [editable path="ImitateEvent/Imitate_ui/Control"]
+[editable path="Anxiety_notice"]

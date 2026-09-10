@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://brifwoi1i800q"]
+
+[node name="Anxiety_notice" type="ColorRect" unique_id=574936013]
+visible = false
+offset_left = -2.0
+offset_top = -5.0
+offset_right = 1153.0
+offset_bottom = 650.0
+color = Color(0.13026777, 0.18696508, 0.4653386, 0.24705882)
+
+[node name="Label" type="Label" parent="." unique_id=545999420]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 281.0
+offset_right = 1131.0
+offset_bottom = 378.0
+theme_override_font_sizes/font_size = 34
+text = "Uh ohh unable to respond properly...
+ anxiety is too high, let's  wait a little so you could calm down"
+horizontal_alignment = 1

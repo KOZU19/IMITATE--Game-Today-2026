@@ -171,3 +171,8 @@ func _on_next_button_pressed() -> void:
 func end_vn() -> void:
 	print("VN END")
 	get_tree().change_scene_to_file("res://Scene/Experience/eatingtogether.tscn")
+func _process(delta: float) -> void:
+	if Stats.Anxiety >= 50:
+		$Anxiety_notice.show()
+	else:
+		$Anxiety_notice.hide()
