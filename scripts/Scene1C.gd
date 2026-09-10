@@ -1,10 +1,13 @@
 extends Node2D
 @export var vn: Control
 @export var dialogue_text: Label
+@onready var button: Button = $VN/Button
+
 @export var observation: Node2D
 var dialogue:= [
 	"aaaaaaa", "masih blom tau", "observation", "capek dah"
 ]
+
 var dialogue_index := 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,7 +25,7 @@ func show_dialogue() ->void:
 	
 	dialogue_text.text = current_line
 func next_dialogue():
-	dialogue_index += 1
+	dialogue_index+=1
 	show_dialogue()
 #func start_observation(observation_number: int) -> void:
 	#vn.visible =  false

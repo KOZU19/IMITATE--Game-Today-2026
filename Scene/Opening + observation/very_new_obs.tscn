@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dn113y1ywhbaq"]
+
+[ext_resource type="Script" uid="uid://dectxcxvcgaac" path="res://scripts/Scene1C.gd" id="1_olknu"]
+[ext_resource type="PackedScene" uid="uid://bai4j3pffg4rr" path="res://Scene/Opening + observation/observation_scene.tscn" id="2_0fn1l"]
+
+[node name="Node2D" type="Node2D" unique_id=1308131335 node_paths=PackedStringArray("vn", "dialogue_text", "observation")]
+position = Vector2(0, 10)
+script = ExtResource("1_olknu")
+vn = NodePath("VN")
+dialogue_text = NodePath("VN/Label")
+observation = NodePath("Node2D")
+
+[node name="VN" type="Control" parent="." unique_id=1551243941]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="VN" unique_id=1565272775]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 470.0
+offset_right = 1156.0
+offset_bottom = 625.0
+color = Color(0.22801965, 0.08041086, 0.03907938, 1)
+
+[node name="Label" type="Label" parent="VN" unique_id=290586572]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 516.0
+offset_right = 275.0
+offset_bottom = 568.0
+text = "yjgkhkjlk"
+
+[node name="Button" type="Button" parent="VN" unique_id=353250848]
+layout_mode = 0
+offset_left = 1039.0
+offset_top = 512.0
+offset_right = 1100.0
+offset_bottom = 574.0
+theme_override_font_sizes/font_size = 39
+text = ">"
+
+[node name="Node2D" parent="." unique_id=1186549978 instance=ExtResource("2_0fn1l")]
+
+[connection signal="pressed" from="VN/Button" to="." method="_on_next_button_pressed"]

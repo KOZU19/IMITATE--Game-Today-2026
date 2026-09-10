@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://8mvu6xiugal"]
 
-[ext_resource type="Script" uid="uid://bfwbpk1gbmta1" path="res://scripts/pulang.gd" id="1_cy6x5"]
+[ext_resource type="Script" uid="uid://bfwbpk1gbmta1" path="res://scripts/pulang.gd" id="1_rw758"]
 
 [node name="VN" type="Control" unique_id=456281504]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_cy6x5")
+script = ExtResource("1_rw758")
 
 [node name="Control" type="Control" parent="." unique_id=2113831867]
 anchors_preset = 0

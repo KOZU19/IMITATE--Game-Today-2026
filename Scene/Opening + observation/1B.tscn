@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://ikgvl1ibf46q"]
 
-[ext_resource type="PackedScene" uid="uid://b26rjxcaggxha" path="res://Scene/Opening + observation/1B_player.tscn" id="1_x78wg"]
-[ext_resource type="Texture2D" uid="uid://cmmnyl25hmvyj" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (1).png" id="2_nwago"]
-[ext_resource type="Texture2D" uid="uid://chn5egmjpq3y3" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (2).png" id="3_fdrdd"]
-[ext_resource type="Texture2D" uid="uid://cfsxxruds3fj4" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (3).png" id="4_jqyq0"]
-[ext_resource type="Texture2D" uid="uid://cd1rvpn1nmdj8" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (5).png" id="5_gx1qu"]
-[ext_resource type="Texture2D" uid="uid://do7sidng6lqd4" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (4).png" id="6_ompgu"]
-[ext_resource type="Texture2D" uid="uid://c3mtglw6ngt2b" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (6).png" id="7_tndta"]
-[ext_resource type="Texture2D" uid="uid://fl6ov0yghgm5" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (8).png" id="8_kflyf"]
-[ext_resource type="Texture2D" uid="uid://basaxpglfyoqi" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (10).png" id="9_eaqsw"]
-[ext_resource type="Texture2D" uid="uid://bfa4fqlrmn7ix" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (11).png" id="10_edanf"]
-[ext_resource type="Texture2D" uid="uid://carhg5qm6n54t" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (13).png" id="11_4b1hx"]
+[ext_resource type="Texture2D" uid="uid://cmmnyl25hmvyj" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (1).png" id="1_k6cb8"]
+[ext_resource type="Texture2D" uid="uid://chn5egmjpq3y3" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (2).png" id="2_wufp7"]
+[ext_resource type="Texture2D" uid="uid://cfsxxruds3fj4" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (3).png" id="3_1d3cy"]
+[ext_resource type="Texture2D" uid="uid://cd1rvpn1nmdj8" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (5).png" id="4_a5o16"]
+[ext_resource type="Texture2D" uid="uid://do7sidng6lqd4" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (4).png" id="5_dcbn4"]
+[ext_resource type="Texture2D" uid="uid://c3mtglw6ngt2b" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (6).png" id="6_8ybhn"]
+[ext_resource type="Texture2D" uid="uid://fl6ov0yghgm5" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (8).png" id="7_a8am8"]
+[ext_resource type="Texture2D" uid="uid://basaxpglfyoqi" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (10).png" id="8_k55yq"]
+[ext_resource type="Texture2D" uid="uid://bfa4fqlrmn7ix" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (11).png" id="9_p2a3e"]
+[ext_resource type="Texture2D" uid="uid://carhg5qm6n54t" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (13).png" id="10_65m4h"]
+[ext_resource type="PackedScene" uid="uid://b26rjxcaggxha" path="res://Scene/Opening + observation/1B_player.tscn" id="11_03luh"]
 
 [sub_resource type="GDScript" id="GDScript_wbk04"]
 resource_name = "Intro"
@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 
 
 func _on_area_3d_2_body_entered(body:CharacterBody3D) -> void:
-	get_tree().change_scene_to_file(\"res://Scene/Scene1C.tscn\")
+	get_tree().change_scene_to_file(\"res://Scene/Opening + observation/Scene1C.tscn\")
 "
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sqb0a"]
@@ -70,12 +70,6 @@ size = Vector3(49.149704, 0.087402344, 2.774414)
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=682415839]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2261915, 0.94489324, -2.2926612)
 size = Vector3(49.405304, 2.954956, 0.13085938)
-
-[node name="Node3D" parent="." unique_id=1556649486 instance=ExtResource("1_x78wg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.164389, 0, 0)
-
-[node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=1109884715]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.7894206)
 
 [node name="Area1" type="Area3D" parent="." unique_id=2093483446]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.164389, 0, 1.7894206)
@@ -121,47 +115,47 @@ shape = SubResource("BoxShape3D_iyjhp")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=15196221]
 transform = Transform3D(0.15589921, 0, 0, 0, 0.14832498, 0, 0, 0, 1, -15.14427, 1.239286, 0)
-texture = ExtResource("2_nwago")
+texture = ExtResource("1_k6cb8")
 
 [node name="Sprite3D2" type="Sprite3D" parent="." unique_id=989468226]
 transform = Transform3D(0.1558992, 0, 0, 0, 0.14832497, 0, 0, 0, 1, -11.350115, 0.2016443, 0)
-texture = ExtResource("3_fdrdd")
+texture = ExtResource("2_wufp7")
 
 [node name="Sprite3D3" type="Sprite3D" parent="." unique_id=114195573]
 transform = Transform3D(0.15589921, 0, 0, 0, 0.14832498, 0, 0, 0, 1, -6.964057, 1.2754891, 0)
-texture = ExtResource("4_jqyq0")
+texture = ExtResource("3_1d3cy")
 
 [node name="Sprite3D4" type="Sprite3D" parent="." unique_id=1397480311]
 transform = Transform3D(0.1558992, 0, 0, 0, 0.14832497, 0, 0, 0, 1, -3.0189621, 0.029032826, 0)
-texture = ExtResource("5_gx1qu")
+texture = ExtResource("4_a5o16")
 
 [node name="Sprite3D5" type="Sprite3D" parent="." unique_id=2088382266]
 transform = Transform3D(0.1558992, 0, 0, 0, 0.14832497, 0, 0, 0, 1, -3.0189621, 0.029032826, 0)
-texture = ExtResource("5_gx1qu")
+texture = ExtResource("4_a5o16")
 
 [node name="Sprite3D6" type="Sprite3D" parent="." unique_id=1409105175]
 transform = Transform3D(0.1558992, 0, 0, 0, 0.14832497, 0, 0, 0, 1, 0.5108297, 1.0493597, 0)
-texture = ExtResource("6_ompgu")
+texture = ExtResource("5_dcbn4")
 
 [node name="Sprite3D7" type="Sprite3D" parent="." unique_id=1891772636]
 transform = Transform3D(0.1558992, 0, 0, 0, 0.14832497, 0, 0, 0, 1, 2.7509258, 2.29664, 0)
-texture = ExtResource("7_tndta")
+texture = ExtResource("6_8ybhn")
 
 [node name="Sprite3D8" type="Sprite3D" parent="." unique_id=1730955864]
 transform = Transform3D(0.1558992, 0, 0, 0, 0.14832497, 0, 0, 0, 1, 6.428132, 0.65089965, 0)
-texture = ExtResource("8_kflyf")
+texture = ExtResource("7_a8am8")
 
 [node name="Sprite3D9" type="Sprite3D" parent="." unique_id=1232703512]
 transform = Transform3D(0.1558992, 0, 0, 0, 0.14832497, 0, 0, 0, 1, 11.442965, 1.5812523, 0)
-texture = ExtResource("9_eaqsw")
+texture = ExtResource("8_k55yq")
 
 [node name="Sprite3D10" type="Sprite3D" parent="." unique_id=1689526737]
 transform = Transform3D(0.1558992, 0, 0, 0, 0.14832497, 0, 0, 0, 1, 16.387392, 1.5812523, 0)
-texture = ExtResource("10_edanf")
+texture = ExtResource("9_p2a3e")
 
 [node name="Sprite3D11" type="Sprite3D" parent="." unique_id=148422456]
 transform = Transform3D(0.1558992, 0, 0, 0, 0.14832497, 0, 0, 0, 1, 20.98149, 1.5812523, 0)
-texture = ExtResource("11_4b1hx")
+texture = ExtResource("10_65m4h")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1875364327]
 transform = Transform3D(0.1558992, 0, 0, 0, 0.14832497, 0, 0, 0, 1, 30.750854, 1.5812523, 0)
@@ -176,5 +170,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.016183, 0.94489324, 0.05725
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2" unique_id=1558768497]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.769157, 0.11138654, -0.82537603)
 shape = SubResource("BoxShape3D_t2cgd")
+
+[node name="Node3D2" parent="." unique_id=1556649486 instance=ExtResource("11_03luh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.164389, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Node3D2" unique_id=1109884715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.7894206)
 
 [connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_2_body_entered"]

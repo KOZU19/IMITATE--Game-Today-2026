@@ -1,22 +1,22 @@
-[gd_scene format=3 uid="uid://lxw6jbd6tfu2"]
+[gd_scene format=3 uid="uid://cmowksmry6n40"]
 
-[ext_resource type="PackedScene" uid="uid://cdfmh86h8oqiv" path="res://Scene/Experience/policebazaar.tscn" id="1_bt1df"]
-[ext_resource type="PackedScene" uid="uid://bhipetr01jbt3" path="res://Scene/MC.tscn" id="2_ivnpe"]
-[ext_resource type="Script" uid="uid://c8u27beut5uoc" path="res://scripts/mc.gd" id="3_6w3gi"]
-[ext_resource type="Script" uid="uid://ulax14an6al6" path="res://scripts/imitate_event.gd" id="4_bt1df"]
-[ext_resource type="PackedScene" uid="uid://cxwxpa28s5fqv" path="res://UI/Pose_Guide.tscn" id="5_wqvxt"]
-[ext_resource type="PackedScene" uid="uid://bfrqi45q4wwhk" path="res://Scene/stats.tscn" id="6_mb85d"]
+[ext_resource type="PackedScene" uid="uid://cdfmh86h8oqiv" path="res://Scene/Experience/policebazaar.tscn" id="1_bvv7v"]
+[ext_resource type="PackedScene" uid="uid://bhipetr01jbt3" path="res://Scene/MC.tscn" id="2_1ms0f"]
+[ext_resource type="Script" uid="uid://c8u27beut5uoc" path="res://scripts/mc.gd" id="3_flq31"]
+[ext_resource type="Script" uid="uid://ulax14an6al6" path="res://scripts/imitate_event.gd" id="4_udjwf"]
+[ext_resource type="PackedScene" uid="uid://cxwxpa28s5fqv" path="res://UI/Pose_Guide.tscn" id="5_dv4th"]
+[ext_resource type="PackedScene" uid="uid://bfrqi45q4wwhk" path="res://Scene/stats.tscn" id="6_wcyf2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iyjhp"]
 size = Vector3(1.3338623, 0.76807225, 3.2028503)
 
 [node name="PoliceBazaarScene" type="Node3D" unique_id=1899171135]
 
-[node name="Envi" parent="." unique_id=1778455113 instance=ExtResource("1_bt1df")]
+[node name="Envi" parent="." unique_id=1778455113 instance=ExtResource("1_bvv7v")]
 
-[node name="player" parent="." unique_id=774346280 groups=["player"] instance=ExtResource("2_ivnpe")]
+[node name="player" parent="." unique_id=774346280 groups=["player"] instance=ExtResource("2_1ms0f")]
 transform = Transform3D(0.5, 0, 0, 0, 0.42000002, 0, 0, 0, 1, 0.85743976, 1, -0.77575696)
-script = ExtResource("3_6w3gi")
+script = ExtResource("3_flq31")
 
 [node name="AnimatedSprite3D" parent="player" index="2" unique_id=650893402]
 transform = Transform3D(0.24465121, 0.011130547, 0, -0.013068403, 0.20837298, 0, 0, 0, 1, -0.84815335, 0, 0)
@@ -29,7 +29,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.526514)
 transform = Transform3D(2, 0, 0, 0, 2.3809524, 0, 0, 0, 1, -1.2147112, 0, -0.774021)
 
 [node name="ImitateEvent" type="Area3D" parent="." unique_id=2010294201]
-script = ExtResource("4_bt1df")
+script = ExtResource("4_udjwf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ImitateEvent" unique_id=84189769]
 transform = Transform3D(1.8, 0, 0, 0, 2.6, 0, 0, 0, 1, 0.30047607, 0.9717881, 0.5139618)
@@ -43,7 +43,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Control" parent="ImitateEvent/Imitate_ui" unique_id=1039805887 instance=ExtResource("5_wqvxt")]
+[node name="Control" parent="ImitateEvent/Imitate_ui" unique_id=1039805887 instance=ExtResource("5_dv4th")]
 layout_mode = 1
 offset_left = -239.0
 offset_top = 3.0000076
@@ -51,21 +51,11 @@ offset_right = -239.0
 offset_bottom = 3.0
 scale = Vector2(1.29, 1.29)
 
-[node name="EAT" parent="ImitateEvent/Imitate_ui/Control" index="0" unique_id=1424853346]
-offset_left = 714.26355
-offset_top = 23.255798
-offset_right = 2250.2637
-offset_bottom = 2031.2559
-
 [node name="TRAVEL" parent="ImitateEvent/Imitate_ui/Control" index="1" unique_id=1750175320]
 visible = false
 
 [node name="EXPLORE" parent="ImitateEvent/Imitate_ui/Control" index="2" unique_id=794831232]
 visible = false
-offset_left = 781.70544
-offset_top = -4.651169
-offset_right = 2317.7056
-offset_bottom = 2003.3489
 
 [node name="Guide4" parent="ImitateEvent/Imitate_ui/Control" index="6" unique_id=232456865]
 offset_left = 789.83057
@@ -73,15 +63,11 @@ offset_top = 32.203392
 offset_right = 2325.8306
 offset_bottom = 2080.2034
 
-[node name="Stats" parent="." unique_id=2047607541 instance=ExtResource("6_mb85d")]
+[node name="Stats" parent="." unique_id=2047607541 instance=ExtResource("6_wcyf2")]
 offset_left = 4.0
 offset_top = 452.0
 offset_right = 4.0
 offset_bottom = 452.0
-
-[node name="Label" type="Label" parent="." unique_id=1985121879]
-offset_right = 40.0
-offset_bottom = 23.0
 
 [connection signal="body_entered" from="ImitateEvent" to="ImitateEvent" method="_on_body_entered"]
 [connection signal="timeout" from="ImitateEvent/Timer" to="ImitateEvent" method="_on_timer_timeout"]

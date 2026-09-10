@@ -3,7 +3,7 @@ extends Control
 @onready var control: Control = $Control
 @onready var speaker_label: Label = $Control/SpeakerLabel
 @onready var dialog_label_1: Label = $Control/DialogLabel1
-@onready var next_button: Button = $"Next Button"
+@onready var next_button: Button = $"Control/Next Button"
 @onready var choice_container: Control = $Choice_container
 
 
@@ -166,4 +166,4 @@ func _on_next_button_pressed() -> void:
 
 func end_vn() -> void:
 	print("VN END")
-	get_tree().change_scene_to_file("res://Scene/fin.tscn")
+	get_tree().change_scene_to_file("res://Scene/Closing/fin.tscn")

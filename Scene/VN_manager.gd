@@ -170,4 +170,4 @@ func _on_next_button_pressed() -> void:
 
 func end_vn() -> void:
 	print("VN END")
-	get_tree().change_scene_to_file("res://Scene/Obs_police_bazaar.tscn")
+	get_tree().change_scene_to_file("res://Scene/Experience/Obs_police_bazaar.tscn")

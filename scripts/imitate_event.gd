@@ -107,7 +107,7 @@ func end_imitate()->void:
 	is_active = false
 	print("imitate end")
 	ui.hide()
-	get_tree().change_scene_to_file("res://Scene/transition_eat.tscn")
+	get_tree().change_scene_to_file("res://Scene/Experience/transition_pulang.tscn")
 
 func choose_pose(pose_name: String)->void:
 	if not is_active:
