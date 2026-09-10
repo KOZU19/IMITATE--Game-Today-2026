@@ -1,4 +1,6 @@
 extends Control
+@onready var background: TextureRect = $Background
+@onready var character: TextureRect = $Character
 
 @onready var control: Control = $Control
 
@@ -15,23 +17,28 @@ var story = [
 	{
 		"id": "beginning",
 		"type": "dialogue",
-		"speaker": "Tahira",
-		"text": "So wuttt?",
-		"expression": "smile",
-		"next": "pooja_talks"
+		"speaker": "Pooja",
+		"text": "Taheera!!",
+		"background": "right_side",
+		"Character": "pooja_talks",
+		"next":"pooja_talks"
 	},
 
 	{
 		"id": "pooja_talks",
 		"type": "dialogue",
+		"text": "aaaaaaaa",
 		"speaker": "Pooja",
-		"text": "idk mann?",
-		"next": "second"
+		"background": "left_side",
+		"character": "Taheera(Sreestha)",
+		"next" : "second"
 	},
 
 	{
 		"id": "second",
 		"type": "choice",
+		"character":"Swetha",
+		"background": "left_side",
 		"choices": [
 			{
 				"text": "This is first choice",
@@ -104,6 +111,16 @@ func show_event(event_id: String) -> void:
 
 	elif event["type"] == "choice":
 		show_choice(event)
+	if event.has("background"):
+		show_background(event["background"])
+	if event.has("character"):
+		show_character(event["character"])
+func show_background(background_name: String) ->void:
+	if background_name == "right_side":
+		background.texture = preload("res://sprite/Untitled224_20260823161116.png")
+func show_character(character_name: String)-> void:
+	if character_name== "pooja":
+		character.texture = preload("res://sprite/Untitled214_20260819154228.png")
 
 
 func show_dialogue(event: Dictionary) -> void:

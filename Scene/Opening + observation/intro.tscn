@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b0d4tc5pa6wgm"]
+
+[node name="Node2D" type="Node2D" unique_id=1288185428]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=791968727]
+offset_right = 1151.0
+offset_bottom = 650.0
+color = Color(0.08337212, 0.09485487, 0.22525412, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1704202893]
+layout_mode = 0
+offset_left = 201.0
+offset_top = 261.0
+offset_right = 921.0
+offset_bottom = 325.0
+theme_override_font_sizes/font_size = 46
+text = "Imagine having such many ideas"

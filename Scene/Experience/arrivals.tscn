@@ -1,11 +1,30 @@
 [gd_scene format=3 uid="uid://6li5dylckqt6"]
 
 [ext_resource type="Script" uid="uid://coafl7kckjhtk" path="res://Scene/VN_manager.gd" id="1_w64o1"]
+[ext_resource type="Texture2D" uid="uid://o2amk7qvmvh5" path="res://sprite/Untitled224_20260823161112.png" id="2_arcxa"]
+[ext_resource type="Texture2D" uid="uid://ckclwwwy88fse" path="res://sprite/Chara/Untitled225_20260829102216.png" id="3_ah4ae"]
 
 [node name="VN" type="Control" unique_id=456281504]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_w64o1")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1554432784]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -14.0
+offset_right = 2064.0
+offset_bottom = 1522.0
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("2_arcxa")
+
+[node name="Character" type="TextureRect" parent="." unique_id=858089586]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -14.0
+offset_right = 1936.0
+offset_bottom = 1066.0
+texture = ExtResource("3_ah4ae")
 
 [node name="Control" type="Control" parent="." unique_id=2113831867]
 anchors_preset = 0
