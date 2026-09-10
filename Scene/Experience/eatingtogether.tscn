@@ -1,18 +1,16 @@
 [gd_scene format=3 uid="uid://c7uv2dvlgqs1d"]
 
-[ext_resource type="PackedScene" uid="uid://cdfmh86h8oqiv" path="res://Scene/Experience/policebazaar.tscn" id="1_fssc4"]
 [ext_resource type="PackedScene" uid="uid://bhipetr01jbt3" path="res://Scene/MC.tscn" id="2_gm23p"]
 [ext_resource type="Script" uid="uid://c8u27beut5uoc" path="res://scripts/mc.gd" id="3_cjnx7"]
 [ext_resource type="Script" uid="uid://ulax14an6al6" path="res://scripts/imitate_event.gd" id="4_031k0"]
 [ext_resource type="PackedScene" uid="uid://cxwxpa28s5fqv" path="res://UI/Pose_Guide.tscn" id="5_mmq6r"]
+[ext_resource type="PackedScene" uid="uid://bbv7v26ico1ub" path="res://3d asset/resto1.glb" id="6_es0hc"]
 [ext_resource type="PackedScene" uid="uid://bfrqi45q4wwhk" path="res://Scene/stats.tscn" id="6_m0i7l"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iyjhp"]
 size = Vector3(1.3338623, 0.76807225, 3.2028503)
 
 [node name="PoliceBazaarScene" type="Node3D" unique_id=1899171135]
-
-[node name="Envi" parent="." unique_id=1778455113 instance=ExtResource("1_fssc4")]
 
 [node name="player" parent="." unique_id=774346280 groups=["player"] instance=ExtResource("2_gm23p")]
 transform = Transform3D(0.5, 0, 0, 0, 0.42000002, 0, 0, 0, 1, 0.85743976, 1, -0.77575696)
@@ -26,7 +24,7 @@ animation = &"squat_exp"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.526514)
 
 [node name="Camera3D" parent="player/Camera Pivot" index="0" unique_id=520094797]
-transform = Transform3D(2, 0, 0, 0, 2.3809524, 0, 0, 0, 1, -1.2147112, 0, -0.774021)
+transform = Transform3D(-0.83473223, 0, 1.8174769, 0, 2.3809524, 0, -0.90873843, 0, -0.41736612, -0.012581587, 0.35841918, -2.4108424)
 
 [node name="ImitateEvent" type="Area3D" parent="." unique_id=2010294201]
 script = ExtResource("4_031k0")
@@ -51,6 +49,12 @@ offset_right = -239.0
 offset_bottom = 3.0
 scale = Vector2(1.29, 1.29)
 
+[node name="EAT" parent="ImitateEvent/Imitate_ui/Control" index="0" unique_id=1424853346]
+offset_left = 749.9225
+offset_top = 14.728676
+offset_right = 2285.9224
+offset_bottom = 2022.7288
+
 [node name="TRAVEL" parent="ImitateEvent/Imitate_ui/Control" index="1" unique_id=1750175320]
 visible = false
 
@@ -58,10 +62,10 @@ visible = false
 visible = false
 
 [node name="Guide4" parent="ImitateEvent/Imitate_ui/Control" index="6" unique_id=232456865]
-offset_left = 789.83057
-offset_top = 32.203392
-offset_right = 2325.8306
-offset_bottom = 2080.2034
+offset_left = 803.876
+offset_top = 34.10852
+offset_right = 2339.876
+offset_bottom = 2082.1084
 
 [node name="Stats" parent="." unique_id=2047607541 instance=ExtResource("6_m0i7l")]
 offset_left = 4.0
@@ -69,9 +73,18 @@ offset_top = 452.0
 offset_right = 4.0
 offset_bottom = 452.0
 
+[node name="resto1" parent="." unique_id=1463745486 instance=ExtResource("6_es0hc")]
+transform = Transform3D(0.255, 0, 0, 0, 0.255, 0, 0, 0, 0.255, 0.7930777, 0.73311555, -1.4792693)
+
+[node name="SpotLight3D" type="OmniLight3D" parent="." unique_id=1004661776]
+transform = Transform3D(0.9999738, 0.0072497055, 0, -0.0072497055, 0.9999738, 0, 0, 0, 1, 0.7162478, 1.3681668, -0.8216995)
+light_color = Color(0.80116624, 0.49792206, 0.24635759, 1)
+light_energy = 3.063
+light_indirect_energy = 2.155
+light_volumetric_fog_energy = 9.302
+
 [connection signal="body_entered" from="ImitateEvent" to="ImitateEvent" method="_on_body_entered"]
 [connection signal="timeout" from="ImitateEvent/Timer" to="ImitateEvent" method="_on_timer_timeout"]
 
-[editable path="Envi"]
 [editable path="player"]
 [editable path="ImitateEvent/Imitate_ui/Control"]

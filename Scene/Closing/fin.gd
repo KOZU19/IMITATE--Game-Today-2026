@@ -1,6 +1,7 @@
 extends Control
 
 @onready var control: Control = $Control
+
 @onready var speaker_label: Label = $Control/SpeakerLabel
 @onready var dialog_label_1: Label = $Control/DialogLabel1
 @onready var next_button: Button = $"Control/Next Button"
@@ -106,7 +107,9 @@ func show_event(event_id: String) -> void:
 
 
 func show_dialogue(event: Dictionary) -> void:
+	control.show()
 	choice_container.hide()
+	dialog_label_1.show()
 	speaker_label.text= event["speaker"]
 	dialog_label_1.text = event["text"]
 
@@ -119,6 +122,7 @@ func show_expressions(expression_name: String) -> void:
 
 
 func show_choice(event: Dictionary) -> void:
+	control.hide()
 	choice_container.show()
 	dialog_label_1.hide()
 
@@ -165,5 +169,4 @@ func _on_next_button_pressed() -> void:
 
 
 func end_vn() -> void:
-	print("VN END")
-	get_tree().change_scene_to_file("res://Scene/Closing/fin.tscn" )
+	print("the game end")

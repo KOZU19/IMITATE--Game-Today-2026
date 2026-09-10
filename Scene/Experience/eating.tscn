@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://bqmm6fgyvdyb1"]
+[gd_scene format=3 uid="uid://bths6vx2xoxob"]
 
-[ext_resource type="Script" uid="uid://clqvnoxe6ftva" path="res://Scene/Closing/fin.gd" id="1_4vgnj"]
+[ext_resource type="Script" uid="uid://c4ukjo3hxt8cc" path="res://scripts/eating.gd" id="1_v063j"]
 
 [node name="VN" type="Control" unique_id=456281504]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_4vgnj")
+script = ExtResource("1_v063j")
 
 [node name="Control" type="Control" parent="." unique_id=2113831867]
 anchors_preset = 0
@@ -32,8 +32,7 @@ text = "Maxi"
 
 [node name="DialogLabel1" type="Label" parent="Control" unique_id=2071631508]
 layout_mode = 0
-offset_top = -14.0
-offset_right = 776.0
+offset_right = 586.0
 offset_bottom = 74.0
 text = "Gw ganteng banget"
 
