@@ -117,8 +117,29 @@ func show_dialogue(event: Dictionary) -> void:
 
 	if event.has("expression"):
 		show_expressions(event["expression"])
-func show_expressions(expression_name: String) -> void:
-	print("Expression:", expression_name)
+func show_expressions(character_name: String) -> void:
+	if character_name== "pooja_talk":
+		character.texture = preload("res://sprite/VN-chara/Pooja_talk.png")
+	if character_name== "pooja_smile":
+		character.texture = preload("res://sprite/VN-chara/Pooja_smile.png")
+	if character_name== "pooja_normal":
+		character.texture = preload("res://sprite/VN-chara/Pooja_normal.png")	
+	if character_name== "sreestha_normal":
+		character.texture = preload("res://sprite/VN-chara/S_normal.png")		
+	if character_name== "sreestha_smile":
+		character.texture = preload("res://sprite/VN-chara/S_smile.png")	
+	if character_name== "sreestha_thinking":
+		character.texture = preload("res://sprite/VN-chara/S_thinking.png")		
+	if character_name== "sreestha_confuse":
+		character.texture = preload("res://sprite/VN-chara/S_confuse.png")	
+	if character_name== "swetha_normal":
+		character.texture = preload("res://sprite/VN-chara/Swetha_normal.png")	
+	if character_name== "swetha_smile":
+		character.texture = preload("res://sprite/VN-chara/swetha_smile.png")	
+	if character_name== "anjali_normal":
+		character.texture = preload("res://sprite/VN-chara/Anjali_normal.png")		
+	if character_name== "anjali_smile":
+		character.texture = preload("res://sprite/VN-chara/Anjali-smile.png")					
 
 
 func show_choice(event: Dictionary) -> void:

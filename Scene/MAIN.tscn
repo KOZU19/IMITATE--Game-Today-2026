@@ -1,5 +1,10 @@
 [gd_scene format=3 uid="uid://4sfo2od2prry"]
 
+[ext_resource type="Texture2D" uid="uid://plhhvste51rh" path="res://sprite/MainMenu/Untitled1265_20260908103744.png" id="1_4c5ek"]
+[ext_resource type="Texture2D" uid="uid://cv1n52qq35qur" path="res://sprite/MainMenu/Untitled1265_20260908103036.png" id="1_ojrwd"]
+[ext_resource type="Texture2D" uid="uid://bg08br20jacls" path="res://sprite/MainMenu/Untitled1265_20260908103044.png" id="2_4c5ek"]
+[ext_resource type="Texture2D" uid="uid://bw7mexc3oyo7m" path="res://sprite/MainMenu/Untitled1265_20260908104652.png" id="3_8p385"]
+
 [sub_resource type="GDScript" id="GDScript_3h12i"]
 script/source = "extends Node2D
 
@@ -7,6 +12,7 @@ script/source = "extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimationPlayer.play(\"menu\")
+	$AnimatedSprite2D.play(\"default\")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -53,6 +59,20 @@ _data = {
 &"menu": SubResource("Animation_a1u8q")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_iyjhp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ojrwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4c5ek")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
 [node name="Node2D" type="Node2D" unique_id=1947401183]
 script = SubResource("GDScript_3h12i")
 
@@ -60,24 +80,33 @@ script = SubResource("GDScript_3h12i")
 root_node = NodePath("../Label2")
 libraries/ = SubResource("AnimationLibrary_78rud")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1554172744]
-offset_right = 1151.0
-offset_bottom = 656.0
-color = Color(0, 0, 0, 1)
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=623556501]
+position = Vector2(567.5001, 323.5)
+scale = Vector2(0.5942709, 0.59537035)
+texture = ExtResource("1_4c5ek")
 
-[node name="Label" type="Label" parent="." unique_id=1410690782]
-offset_left = -525.0
-offset_top = 162.0
-offset_right = -143.0
-offset_bottom = 288.0
-theme_override_font_sizes/font_size = 92
-text = "IMITATE!"
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1554172744]
+offset_left = -9.0
+offset_top = 2.0
+offset_right = 1142.0
+offset_bottom = 658.0
+color = Color(0, 0, 0, 0.20392157)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1131399750]
+position = Vector2(605, 343)
+scale = Vector2(0.61, 0.61)
+sprite_frames = SubResource("SpriteFrames_iyjhp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=818958739]
+position = Vector2(338, 299)
+scale = Vector2(0.365, 0.365)
+texture = ExtResource("3_8p385")
 
 [node name="Label2" type="Label" parent="." unique_id=737802007]
-offset_left = 388.0
-offset_top = 564.0
-offset_right = 856.0
-offset_bottom = 632.0
+offset_left = 386.0
+offset_top = 559.0
+offset_right = 854.0
+offset_bottom = 627.0
 theme_override_colors/font_color = Color(1, 1, 1, 0.83137256)
 theme_override_font_sizes/font_size = 36
 text = "Press Space to Start"

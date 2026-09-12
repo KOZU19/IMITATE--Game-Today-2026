@@ -5,25 +5,8 @@ var og_pos: Vector2
 var is_observing:= false
 var obs_pos := Vector2(700, 500)
 @onready var label: Label = $Label
-var required_parts := ["head", "body"]
+var required_parts := ["forehead", "head", "body", "mouth"]
 var observed_parts := []
-#var observation_data := {
-		#"required_parts": ["head", "body", "phone"],
-		#"messages":{
-			#"head" :"this is head",
-			#"body" :"this is body",
-			#"phone" :"this is phone"}
-		#}
-	#},
-	#2: {
-		#"required_parts": ["friend_1", "friend_2", "friend_3"],
-		#"messages" : {
-			#"friend_1" : "He is cool",
-			#"friend_2" : "He is handsome",
-			#"friend_3" : "He is alive"
-		#}
-	#}
-#}
 func _ready():
 	label.hide()
 	og_scale = sprite_2d.scale
@@ -63,9 +46,11 @@ func observe(area: Area2D, message: String):
 	
 	await tween.finished
 	label.show()
+	$ColorRect.show()
 	label.text = message
 	await get_tree().create_timer(2.0).timeout
 	label.hide()
+	$ColorRect.hide()
 	var return_tween = create_tween()
 	return_tween.set_parallel(true)
 	return_tween.tween_property(
@@ -89,15 +74,13 @@ func _on_head_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> 
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
-				observe($head, "Ini kepala")
-				
-
+				observe($head,"She keeps avoiding eye contact" )
 
 func _on_body_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed:
-				observe($body, "ini badan")
+				observe($body, "She often put her hand on her chin")
 func check_observation_complete() -> void:
 	for part in required_parts:
 		if part not in observed_parts:
@@ -110,3 +93,15 @@ func observation_finished():
 	#observed_parts.clear()
 	#required_parts = observation_data[number]["required parts"]
 		
+func _on_forehead_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				observe($forehead, "She seems to often ask to repeat what i'm saying")
+
+
+func _on_mouth_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				observe($mouth, "I feel like she plays in the way she talks, her true self seems to have colder response")

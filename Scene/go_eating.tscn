@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://dyya2l676sguo"]
+
+[ext_resource type="Script" uid="uid://coafl7kckjhtk" path="res://Scene/VN_manager.gd" id="1_lafen"]
+[ext_resource type="Texture2D" uid="uid://bd2n3n7gy4thc" path="res://sprite/Game/Untitled1283_20260911140535.png" id="2_wo2xt"]
+[ext_resource type="Texture2D" uid="uid://ckclwwwy88fse" path="res://sprite/Chara/Untitled225_20260829102216.png" id="3_8otbc"]
+
+[node name="VN" type="Control" unique_id=456281504]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_lafen")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1554432784]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -18.0
+offset_right = 2079.7144
+offset_bottom = 1192.7142
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("2_wo2xt")
+
+[node name="Control" type="Control" parent="." unique_id=2113831867]
+anchors_preset = 0
+offset_left = 147.0
+offset_top = 557.0
+offset_right = 187.0
+offset_bottom = 597.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1046385425]
+layout_mode = 0
+offset_left = -118.0
+offset_top = -42.0
+offset_right = 1012.0
+offset_bottom = 97.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Control" unique_id=58948012]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -50.0
+offset_right = 246.0
+offset_bottom = -7.0
+color = Color(0.280718, 0.5553353, 0.5379292, 1)
+
+[node name="Character" type="TextureRect" parent="Control" unique_id=858089586]
+layout_mode = 0
+offset_left = -266.0
+offset_top = -207.0
+offset_right = 1654.0
+offset_bottom = 873.0
+scale = Vector2(0.305, 0.305)
+texture = ExtResource("3_8otbc")
+
+[node name="Next Button" type="Button" parent="Control" unique_id=382599753]
+layout_mode = 0
+offset_left = 862.0
+offset_top = -34.0
+offset_right = 924.0
+offset_bottom = 28.0
+
+[node name="SpeakerLabel" type="Label" parent="Control" unique_id=1844120203]
+layout_mode = 0
+offset_left = 69.0
+offset_top = -43.0
+offset_right = 225.0
+offset_bottom = 11.0
+theme_override_font_sizes/font_size = 21
+text = "Maxi Ganteng "
+
+[node name="DialogLabel1" type="Label" parent="Control" unique_id=2071631508]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 21.0
+offset_right = 670.0
+offset_bottom = 95.0
+text = "Gw ganteng banget"
+
+[node name="Choice_container" type="Control" parent="." unique_id=84636469]
+anchors_preset = 0
+offset_left = 105.0
+offset_top = 274.0
+offset_right = 1129.0
+offset_bottom = 498.0
+
+[node name="Choice1" type="Button" parent="Choice_container" unique_id=1967947025]
+layout_mode = 0
+offset_right = 1018.0
+offset_bottom = 64.0
+
+[node name="Choice2" type="Button" parent="Choice_container" unique_id=2134877034]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 97.0
+offset_right = 1021.0
+offset_bottom = 155.0
+
+[node name="Choice3" type="Button" parent="Choice_container" unique_id=2031281278]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -95.0
+offset_right = 1018.0
+offset_bottom = -33.0
+
+[connection signal="pressed" from="Control/Next Button" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="Choice_container/Choice1" to="." method="_on_choice_1_pressed"]
+[connection signal="pressed" from="Choice_container/Choice2" to="." method="_on_choice_2_pressed"]
+[connection signal="pressed" from="Choice_container/Choice3" to="." method="_on_choice_3_pressed"]

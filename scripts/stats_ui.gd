@@ -12,10 +12,6 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	$suspicion.text = "Suspicion"
-	$friendship.text="Friendship" 
-	$satisfaction.text = "Satisfaction"
-	$anxiety.text ="Anxiety=" + str(Stats.Anxiety)
 	suspicion_progress_bar.value=Stats.suspicion
 	friendship_progress_bar.value = Stats.friendship
 	satisfaction_progress_bar.value= Stats.satisfaction

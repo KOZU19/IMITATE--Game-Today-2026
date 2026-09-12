@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://6li5dylckqt6"]
 
 [ext_resource type="Script" uid="uid://coafl7kckjhtk" path="res://Scene/VN_manager.gd" id="1_w64o1"]
-[ext_resource type="Texture2D" uid="uid://o2amk7qvmvh5" path="res://sprite/Untitled224_20260823161112.png" id="2_arcxa"]
+[ext_resource type="Texture2D" uid="uid://bd2n3n7gy4thc" path="res://sprite/Game/Untitled1283_20260911140535.png" id="2_arcxa"]
 [ext_resource type="Texture2D" uid="uid://ckclwwwy88fse" path="res://sprite/Chara/Untitled225_20260829102216.png" id="3_ah4ae"]
 
 [node name="VN" type="Control" unique_id=456281504]
@@ -11,20 +11,12 @@ script = ExtResource("1_w64o1")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1554432784]
 layout_mode = 0
-offset_left = 16.0
-offset_top = -14.0
-offset_right = 2064.0
-offset_bottom = 1522.0
+offset_left = -4.0
+offset_top = -18.0
+offset_right = 2079.7144
+offset_bottom = 1192.7142
 scale = Vector2(0.56, 0.56)
 texture = ExtResource("2_arcxa")
-
-[node name="Character" type="TextureRect" parent="." unique_id=858089586]
-layout_mode = 0
-offset_left = 16.0
-offset_top = -14.0
-offset_right = 1936.0
-offset_bottom = 1066.0
-texture = ExtResource("3_ah4ae")
 
 [node name="Control" type="Control" parent="." unique_id=2113831867]
 anchors_preset = 0
@@ -32,6 +24,31 @@ offset_left = 147.0
 offset_top = 557.0
 offset_right = 187.0
 offset_bottom = 597.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1046385425]
+layout_mode = 0
+offset_left = -118.0
+offset_top = -42.0
+offset_right = 1012.0
+offset_bottom = 97.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Control" unique_id=58948012]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -50.0
+offset_right = 246.0
+offset_bottom = -7.0
+color = Color(0.280718, 0.5553353, 0.5379292, 1)
+
+[node name="Character" type="TextureRect" parent="Control" unique_id=858089586]
+layout_mode = 0
+offset_left = -266.0
+offset_top = -207.0
+offset_right = 1654.0
+offset_bottom = 873.0
+scale = Vector2(0.305, 0.305)
+texture = ExtResource("3_ah4ae")
 
 [node name="Next Button" type="Button" parent="Control" unique_id=382599753]
 layout_mode = 0
@@ -42,25 +59,27 @@ offset_bottom = 28.0
 
 [node name="SpeakerLabel" type="Label" parent="Control" unique_id=1844120203]
 layout_mode = 0
-offset_left = -52.0
-offset_top = -45.0
-offset_right = -3.0
-offset_bottom = -15.0
+offset_left = 69.0
+offset_top = -43.0
+offset_right = 225.0
+offset_bottom = 11.0
 theme_override_font_sizes/font_size = 21
-text = "Maxi"
+text = "Maxi Ganteng "
 
 [node name="DialogLabel1" type="Label" parent="Control" unique_id=2071631508]
 layout_mode = 0
-offset_right = 586.0
-offset_bottom = 74.0
+offset_left = 84.0
+offset_top = 21.0
+offset_right = 670.0
+offset_bottom = 95.0
 text = "Gw ganteng banget"
 
 [node name="Choice_container" type="Control" parent="." unique_id=84636469]
 anchors_preset = 0
-offset_left = 73.0
-offset_top = 323.0
-offset_right = 1097.0
-offset_bottom = 547.0
+offset_left = 105.0
+offset_top = 274.0
+offset_right = 1129.0
+offset_bottom = 498.0
 
 [node name="Choice1" type="Button" parent="Choice_container" unique_id=1967947025]
 layout_mode = 0
@@ -69,10 +88,10 @@ offset_bottom = 64.0
 
 [node name="Choice2" type="Button" parent="Choice_container" unique_id=2134877034]
 layout_mode = 0
-offset_left = -4.0
-offset_top = 96.0
-offset_right = 1012.0
-offset_bottom = 154.0
+offset_left = 5.0
+offset_top = 97.0
+offset_right = 1021.0
+offset_bottom = 155.0
 
 [node name="Choice3" type="Button" parent="Choice_container" unique_id=2031281278]
 layout_mode = 0

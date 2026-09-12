@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ikgvl1ibf46q"]
 
 [ext_resource type="Texture2D" uid="uid://cmmnyl25hmvyj" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (1).png" id="1_k6cb8"]
+[ext_resource type="Script" uid="uid://twbpgwmpjiui" path="res://scripts/introoo.gd" id="1_wufp7"]
 [ext_resource type="Texture2D" uid="uid://chn5egmjpq3y3" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (2).png" id="2_wufp7"]
 [ext_resource type="Texture2D" uid="uid://cfsxxruds3fj4" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (3).png" id="3_1d3cy"]
 [ext_resource type="Texture2D" uid="uid://cd1rvpn1nmdj8" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (5).png" id="4_a5o16"]
@@ -12,25 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://carhg5qm6n54t" path="res://sprite/Stage 1b/Texts/Illustration 20260905 3 (13).png" id="10_65m4h"]
 [ext_resource type="PackedScene" uid="uid://b26rjxcaggxha" path="res://Scene/Opening + observation/1B_player.tscn" id="11_03luh"]
 
-[sub_resource type="GDScript" id="GDScript_wbk04"]
-resource_name = "Intro"
-script/source = "extends Node3D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
-func _on_area_3d_2_body_entered(body:CharacterBody3D) -> void:
-	get_tree().change_scene_to_file(\"res://Scene/Opening + observation/Scene1C.tscn\")
-"
-
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sqb0a"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -39,7 +21,8 @@ ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
 sky_material = SubResource("ProceduralSkyMaterial_sqb0a")
 
 [sub_resource type="Environment" id="Environment_tucl3"]
-background_mode = 2
+background_mode = 1
+background_color = Color(0.07762883, 0.07762881, 0.07762881, 1)
 sky = SubResource("Sky_x78wg")
 glow_enabled = true
 
@@ -53,7 +36,7 @@ size = Vector3(24.447021, 20.802002, 1.793457)
 size = Vector3(2.769043, 2.7211914, 3.7368164)
 
 [node name="Node3D" type="Node3D" unique_id=586375044]
-script = SubResource("GDScript_wbk04")
+script = ExtResource("1_wufp7")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=46709489]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0.66475666, 0)
@@ -114,15 +97,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.202589, 0.8838501, -1.9564
 shape = SubResource("BoxShape3D_iyjhp")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=15196221]
-transform = Transform3D(0.15589921, 0, 0, 0, 0.14832498, 0, 0, 0, 1, -15.14427, 1.239286, 0)
+transform = Transform3D(0.15589921, 0, 0, 0, 0.14832498, 0, 0, 0, 1, -15.14427, 0.5431771, 0)
 texture = ExtResource("1_k6cb8")
 
 [node name="Sprite3D2" type="Sprite3D" parent="." unique_id=989468226]
-transform = Transform3D(0.1558992, 0, 0, 0, 0.14832497, 0, 0, 0, 1, -11.350115, 0.2016443, 0)
+transform = Transform3D(0.1558992, 0, 0, 0, 0.14881544, 0, 0, 0, 0.079256356, -11.350115, 0.2016443, -0.899212)
 texture = ExtResource("2_wufp7")
 
 [node name="Sprite3D3" type="Sprite3D" parent="." unique_id=114195573]
-transform = Transform3D(0.15589921, 0, 0, 0, 0.14832498, 0, 0, 0, 1, -6.964057, 1.2754891, 0)
+transform = Transform3D(0.15589921, 0, 0, 0, 0.14832498, 0, 0, 0, 1, -6.964057, -0.21013814, 0)
 texture = ExtResource("3_1d3cy")
 
 [node name="Sprite3D4" type="Sprite3D" parent="." unique_id=1397480311]
@@ -134,7 +117,7 @@ transform = Transform3D(0.1558992, 0, 0, 0, 0.14832497, 0, 0, 0, 1, -3.0189621, 
 texture = ExtResource("4_a5o16")
 
 [node name="Sprite3D6" type="Sprite3D" parent="." unique_id=1409105175]
-transform = Transform3D(0.1558992, 0, 0, 0, 0.14832497, 0, 0, 0, 1, 0.5108297, 1.0493597, 0)
+transform = Transform3D(0.1558992, 0, 0, 0, 0.14832497, 0, 0, 0, 1, 0.5108297, -0.17931211, 0)
 texture = ExtResource("5_dcbn4")
 
 [node name="Sprite3D7" type="Sprite3D" parent="." unique_id=1891772636]
@@ -172,9 +155,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.769157, 0.11138654, -0.825
 shape = SubResource("BoxShape3D_t2cgd")
 
 [node name="Node3D2" parent="." unique_id=1556649486 instance=ExtResource("11_03luh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.164389, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.674166, 0.16119528, 0.5839416)
 
 [node name="Camera3D" type="Camera3D" parent="Node3D2" unique_id=1109884715]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.7894206)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.24858895, 1.8117967)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Node3D2" unique_id=2076907006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.7599106)
+light_color = Color(0.45490196, 1, 1, 1)
 
 [connection signal="body_entered" from="Area3D2" to="." method="_on_area_3d_2_body_entered"]
+
+[editable path="Node3D2"]

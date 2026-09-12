@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://b26rjxcaggxha"]
 
-[ext_resource type="Texture2D" uid="uid://dnpcfpowot67u" path="res://icon.svg" id="1_7nbvk"]
+[ext_resource type="Texture2D" uid="uid://dgl6jya4xvxig" path="res://sprite/Game/Untitled1280_20260911125424(1).png" id="1_lyrsu"]
+[ext_resource type="Texture2D" uid="uid://c0amo1ox1fsfi" path="res://sprite/Game/Untitled1280_20260911125424.png" id="2_3wtjc"]
+[ext_resource type="Texture2D" uid="uid://dhtsgk566omxc" path="res://sprite/Game/Untitled1280_20260911125439.png" id="3_3suhi"]
+[ext_resource type="Texture2D" uid="uid://bgju257r1q7py" path="res://sprite/Game/Untitled1280_20260911125500.png" id="4_11ou0"]
 
 [sub_resource type="GDScript" id="GDScript_iyjhp"]
 script/source = "extends CharacterBody3D
@@ -8,9 +11,16 @@ script/source = "extends CharacterBody3D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
-	velocity.x = direction * movespeed
-	velocity.z = 0.0
+	var input := Input.get_axis(\"ui_left\", \"ui_right\")
+	velocity.x = input * movespeed
+	if input != 0:
+		$AnimatedSprite3D.play(\"walk\")
+		if input <0:
+			$AnimatedSprite3D.flip_h  =true
+		else:
+			$AnimatedSprite3D.flip_h = false	
+	else:
+		$AnimatedSprite3D.play(\"idle\")		
 	move_and_slide()
 "
 
@@ -18,23 +28,41 @@ func _process(delta: float) -> void:
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_7nbvk")
+"texture": ExtResource("3_3suhi")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lyrsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3wtjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3suhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_11ou0")
+}],
+"loop": 1,
+"name": &"walk",
 "speed": 5.0
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iyjhp"]
-size = Vector3(1.128418, 1.2709961, 0.3491211)
+size = Vector3(0.35864258, 2.1549072, 0.3491211)
 
 [node name="Node3D" type="CharacterBody3D" unique_id=1556649486]
 script = SubResource("GDScript_iyjhp")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1456030320]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.049608707)
+transform = Transform3D(0.16, 0, 0, 0, 0.16, 0, 0, 0, 0.16, 0.8810718, 0, -0.049608707)
 sprite_frames = SubResource("SpriteFrames_mmp1o")
+animation = &"walk"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1605227785]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.064208984, 0.13549805, -0.14477539)
+transform = Transform3D(0.7919922, 0, 0, 0, 0.7919922, 0, 0, 0, 0.7919922, -0.36903703, -0.033254683, -0.14477539)
 shape = SubResource("BoxShape3D_iyjhp")

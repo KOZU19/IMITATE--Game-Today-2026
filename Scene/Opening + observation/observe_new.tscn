@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dectxcxvcgaac" path="res://scripts/Scene1C.gd" id="1_kekt4"]
 [ext_resource type="PackedScene" uid="uid://bai4j3pffg4rr" path="res://Scene/Opening + observation/observation_scene.tscn" id="2_ud17j"]
+[ext_resource type="Texture2D" uid="uid://ba3p61rbmw34o" path="res://sprite/Game/bg1.png" id="2_yyuk0"]
+[ext_resource type="Texture2D" uid="uid://2h75r4rjajqe" path="res://sprite/Ui_new/Intro/Untitled1277_20260911020928.png" id="3_h706y"]
 
 [node name="Node2D" type="Node2D" unique_id=1308131335 node_paths=PackedStringArray("vn", "dialogue_text", "observation")]
 position = Vector2(0, 10)
@@ -9,6 +11,14 @@ script = ExtResource("1_kekt4")
 vn = NodePath("VN")
 dialogue_text = NodePath("VN/Label")
 observation = NodePath("Node2D")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1618904818]
+offset_left = 11.0
+offset_top = -8.000002
+offset_right = 2588.2727
+offset_bottom = 1459.8182
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_yyuk0")
 
 [node name="VN" type="Control" parent="." unique_id=1551243941]
 layout_mode = 3
@@ -19,15 +29,15 @@ layout_mode = 0
 offset_left = 3.0
 offset_top = 470.0
 offset_right = 1156.0
-offset_bottom = 625.0
+offset_bottom = 641.0
 color = Color(0.22801965, 0.08041086, 0.03907938, 1)
 
 [node name="Label" type="Label" parent="VN" unique_id=290586572]
 layout_mode = 0
-offset_left = 35.0
-offset_top = 516.0
-offset_right = 275.0
-offset_bottom = 568.0
+offset_left = 377.0
+offset_top = 505.0
+offset_right = 617.0
+offset_bottom = 557.0
 text = "yjgkhkjlk"
 
 [node name="Button" type="Button" parent="VN" unique_id=353250848]
@@ -40,5 +50,14 @@ theme_override_font_sizes/font_size = 39
 text = ">"
 
 [node name="Node2D" parent="." unique_id=1186549978 instance=ExtResource("2_ud17j")]
+visible = false
+
+[node name="Character" type="TextureRect" parent="." unique_id=1508716453]
+offset_left = -94.0
+offset_top = 275.0
+offset_right = 1954.0
+offset_bottom = 1811.0
+scale = Vector2(0.235, 0.235)
+texture = ExtResource("3_h706y")
 
 [connection signal="pressed" from="VN/Button" to="." method="_on_next_button_pressed"]

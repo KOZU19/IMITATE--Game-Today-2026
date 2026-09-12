@@ -1,18 +1,59 @@
 [gd_scene format=3 uid="uid://bfrqi45q4wwhk"]
 
 [ext_resource type="Script" uid="uid://kdsy4yl4inli" path="res://scripts/stats_ui.gd" id="1_qkx3n"]
-[ext_resource type="Texture2D" uid="uid://chptkcuo0cu5f" path="res://sprite/Chara/Rectangle 1 (2).png" id="2_ha636"]
-[ext_resource type="Texture2D" uid="uid://qoqy0jxa6df1" path="res://sprite/Chara/Rectangle 1 (1).png" id="3_04k6j"]
-[ext_resource type="Texture2D" uid="uid://ckclwwwy88fse" path="res://sprite/Chara/Untitled225_20260829102216.png" id="4_04k6j"]
+[ext_resource type="Texture2D" uid="uid://4m25khh30mgh" path="res://sprite/Ui_new/Anxiety/Untitled1271_20260911003830.png" id="2_vsoxo"]
+[ext_resource type="Texture2D" uid="uid://ba1v87pyhw12" path="res://sprite/Ui_new/Anxiety/Untitled1271_20260911003825.png" id="3_mqfec"]
+[ext_resource type="Texture2D" uid="uid://dkmm0tetxvx4c" path="res://sprite/Ui_new/Anxiety/Untitled1271_20260911003816.png" id="4_ilhi1"]
+[ext_resource type="Texture2D" uid="uid://c1u40gp7nlh2y" path="res://sprite/Ui_new/Anxiety/Untitled1271_20260911003813.png" id="5_rwtt8"]
+[ext_resource type="Texture2D" uid="uid://if5blq4qphkw" path="res://sprite/Ui_new/Anxiety/Untitled1271_20260911003806.png" id="6_bpd23"]
+[ext_resource type="Texture2D" uid="uid://mbe2f083nd1v" path="res://sprite/Ui_new/Anxiety/Untitled1271_20260911003802.png" id="7_yna0f"]
+[ext_resource type="Texture2D" uid="uid://bvpbw02elp7mj" path="res://sprite/Ui_new/Anxiety/Untitled1271_20260911003755.png" id="8_csq65"]
+[ext_resource type="Texture2D" uid="uid://bsj785vbx4x5n" path="res://sprite/Ui_new/Anxiety/Untitled1271_20260911003749.png" id="9_0mdtt"]
+[ext_resource type="Texture2D" uid="uid://nskfyhvuld4w" path="res://sprite/Ui_new/Anxiety/Untitled1271_20260911003744.png" id="10_blr5n"]
+[ext_resource type="Texture2D" uid="uid://i8wgx7adpmnf" path="res://sprite/Ui_new/Stats/Untitled1274_20260911011517.png" id="11_hej87"]
+[ext_resource type="Texture2D" uid="uid://1i5jxom10yqb" path="res://sprite/Ui_new/Stats/Untitled1274_20260911012241.png" id="12_36pjj"]
+[ext_resource type="Texture2D" uid="uid://t7n6yn2fwr8c" path="res://sprite/Ui_new/Stats/Untitled1274_20260911011913.png" id="13_knr14"]
+[ext_resource type="Texture2D" uid="uid://b1nuqin34o4p6" path="res://sprite/Ui_new/Stats/Untitled1274_20260911011915.png" id="14_8jp6v"]
+[ext_resource type="Texture2D" uid="uid://c64g61tqb1uxq" path="res://sprite/Ui_new/Stats/Untitled1274_20260911011911.png" id="15_i6esv"]
+[ext_resource type="Texture2D" uid="uid://debs1la8g304o" path="res://sprite/Ui_new/Stats/Untitled1274_20260911012025.png" id="16_4obd0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iyjhp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_04k6j")
+"texture": ExtResource("2_vsoxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mqfec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ilhi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rwtt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bpd23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yna0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_csq65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0mdtt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_blr5n")
 }],
 "loop": 1,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"new_animation",
 "speed": 5.0
 }]
 
@@ -21,79 +62,55 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_qkx3n")
 
-[node name="suspicion" type="Label" parent="." unique_id=543200647]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 51.0
-offset_right = 41.0
-offset_bottom = 74.0
-text = "Susupicion = "
-
-[node name="friendship" type="Label" parent="." unique_id=32659962]
-layout_mode = 0
-offset_top = 91.0
-offset_right = 40.0
-offset_bottom = 114.0
-text = "Friendship = "
-
-[node name="satisfaction" type="Label" parent="." unique_id=1039902299]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 134.0
-offset_right = 105.0
-offset_bottom = 157.0
-text = "Satisfaction"
-
-[node name="anxiety" type="Label" parent="." unique_id=1508155191]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 172.0
-offset_right = 106.0
-offset_bottom = 195.0
-text = "Anxiety = "
-
-[node name="SuspicionProgressBar" type="TextureProgressBar" parent="." unique_id=1795016312]
-layout_mode = 0
-offset_left = 115.0
-offset_top = 49.0
-offset_right = 741.0
-offset_bottom = 119.0
-scale = Vector2(0.435, 0.435)
-texture_under = ExtResource("2_ha636")
-texture_progress = ExtResource("3_04k6j")
-
-[node name="FriendshipProgressBar" type="TextureProgressBar" parent="." unique_id=1742030440]
-layout_mode = 0
-offset_left = 114.99999
-offset_top = 92.0
-offset_right = 741.0
-offset_bottom = 162.0
-scale = Vector2(0.435, 0.435)
-texture_under = ExtResource("2_ha636")
-texture_progress = ExtResource("3_04k6j")
-
-[node name="SatisfactionProgressBar" type="TextureProgressBar" parent="." unique_id=1818789226]
-layout_mode = 0
-offset_left = 121.0
-offset_top = 138.0
-offset_right = 747.0
-offset_bottom = 208.0
-scale = Vector2(0.435, 0.435)
-texture_under = ExtResource("2_ha636")
-texture_progress = ExtResource("3_04k6j")
-
-[node name="AnxietyProgressBar" type="TextureProgressBar" parent="." unique_id=127904709]
-layout_mode = 0
-offset_left = 121.0
-offset_top = 175.0
-offset_right = 747.0
-offset_bottom = 245.0
-scale = Vector2(0.435, 0.435)
-texture_under = ExtResource("2_ha636")
-texture_progress = ExtResource("3_04k6j")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=915639113]
 visible = false
 modulate = Color(0.5372549, 0.2627451, 0.32941177, 0.44313726)
-position = Vector2(617, 332)
+position = Vector2(578, 313)
+scale = Vector2(0.6041667, 0.5953704)
 sprite_frames = SubResource("SpriteFrames_iyjhp")
+frame_progress = 0.4446241
+
+[node name="Untitled127420260911011517" type="Sprite2D" parent="." unique_id=1784276780]
+position = Vector2(200, 545.00006)
+scale = Vector2(0.30332035, 0.2990741)
+texture = ExtResource("11_hej87")
+
+[node name="SuspicionProgressBar" type="TextureProgressBar" parent="." unique_id=1795016312]
+layout_mode = 0
+offset_left = -45.0
+offset_top = 398.0
+offset_right = 1875.0
+offset_bottom = 1478.0
+scale = Vector2(0.26, 0.26)
+texture_over = ExtResource("12_36pjj")
+texture_progress = ExtResource("13_knr14")
+
+[node name="FriendshipProgressBar" type="TextureProgressBar" parent="." unique_id=1742030440]
+layout_mode = 0
+offset_left = -29.0
+offset_top = 426.0
+offset_right = 1891.0
+offset_bottom = 1506.0
+scale = Vector2(0.25, 0.25)
+texture_over = ExtResource("12_36pjj")
+texture_progress = ExtResource("14_8jp6v")
+
+[node name="SatisfactionProgressBar" type="TextureProgressBar" parent="." unique_id=1818789226]
+layout_mode = 0
+offset_left = -34.0
+offset_top = 455.00003
+offset_right = 1886.0
+offset_bottom = 1535.0
+scale = Vector2(0.255, 0.255)
+texture_over = ExtResource("12_36pjj")
+texture_progress = ExtResource("15_i6esv")
+
+[node name="AnxietyProgressBar" type="TextureProgressBar" parent="." unique_id=127904709]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 497.0
+offset_right = 1927.0
+offset_bottom = 1577.0
+scale = Vector2(0.23, 0.23)
+texture_under = ExtResource("12_36pjj")
+texture_progress = ExtResource("16_4obd0")

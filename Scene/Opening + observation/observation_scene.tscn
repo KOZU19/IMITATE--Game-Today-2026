@@ -1,58 +1,77 @@
 [gd_scene format=3 uid="uid://bai4j3pffg4rr"]
 
 [ext_resource type="Script" uid="uid://bbm2plv4lma34" path="res://scripts/Observe.gd" id="1_g04te"]
-[ext_resource type="Texture2D" uid="uid://dnpcfpowot67u" path="res://icon.svg" id="2_hymme"]
+[ext_resource type="Texture2D" uid="uid://cah6c4loam0vv" path="res://sprite/Game/Untitled1281_20260911133151.png" id="2_gency"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iyjhp"]
 size = Vector2(95.50064, 49.614925)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ftygw"]
-size = Vector2(120.80393, 48.991005)
+size = Vector2(52.882225, 61.80723)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gency"]
+size = Vector2(39.59079, 29.941532)
 
 [node name="Node2D" type="Node2D" unique_id=1186549978]
 script = ExtResource("1_g04te")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1962078873]
+position = Vector2(581.3593, 320.56055)
+scale = Vector2(0.63295907, 0.6397027)
+texture = ExtResource("2_gency")
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=444448060]
-offset_left = -43.0
-offset_top = -16.0
-offset_right = 1189.0
-offset_bottom = 669.0
+visible = false
+offset_left = -31.0
+offset_top = 510.0
+offset_right = 1201.0
+offset_bottom = 677.0
 mouse_filter = 2
 color = Color(0.023001926, 0.18879485, 0.24552774, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1962078873]
-position = Vector2(172, 152.99998)
-scale = Vector2(1.803711, 1.6699219)
-texture = ExtResource("2_hymme")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D" unique_id=762629441]
-position = Vector2(1.5419617, 141.96024)
-scale = Vector2(1.4745531, 1.3)
-texture = ExtResource("2_hymme")
-
 [node name="Label" type="Label" parent="." unique_id=1523666534]
-offset_left = 172.0
-offset_top = 483.0
-offset_right = 356.0
-offset_bottom = 506.0
-text = "hhhhhhhhhhhhhhhhhh"
+offset_left = 59.0
+offset_top = 524.0
+offset_right = 1124.0
+offset_bottom = 694.0
+theme_override_font_sizes/font_size = 31
+text = "aaaaaaaaa"
 
 [node name="head" type="Area2D" parent="." unique_id=1324815474]
-position = Vector2(169, 148.99998)
+position = Vector2(537, 302)
+rotation = 0.37102342
 scale = Vector2(2.659668, 2.1708984)
 disable_mode = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="head" unique_id=1839477866]
-position = Vector2(-7.143749, -14.807446)
+position = Vector2(-15.415459, -0.9212694)
 shape = SubResource("RectangleShape2D_iyjhp")
 
 [node name="body" type="Area2D" parent="." unique_id=1892435098]
-position = Vector2(156, 393)
+position = Vector2(386, 522)
 scale = Vector2(2.659668, 2.1708984)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="body" unique_id=542463446]
-position = Vector2(3.0078926, -2.3031845)
+position = Vector2(18.047363, 5.067036)
 shape = SubResource("RectangleShape2D_ftygw")
+
+[node name="forehead" type="Area2D" parent="." unique_id=1486596795]
+position = Vector2(180, 271)
+scale = Vector2(2.659668, 2.1708984)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="forehead" unique_id=1504683323]
+position = Vector2(26.319073, 18.886185)
+shape = SubResource("RectangleShape2D_ftygw")
+
+[node name="mouth" type="Area2D" parent="." unique_id=2146078536]
+position = Vector2(180, 271)
+scale = Vector2(2.659668, 2.1708984)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="mouth" unique_id=1666940352]
+position = Vector2(103.15229, 61.034637)
+shape = SubResource("RectangleShape2D_gency")
 
 [connection signal="input_event" from="head" to="." method="_on_head_input_event"]
 [connection signal="input_event" from="body" to="." method="_on_body_input_event"]
+[connection signal="input_event" from="forehead" to="." method="_on_forehead_input_event"]
+[connection signal="input_event" from="mouth" to="." method="_on_mouth_input_event"]
